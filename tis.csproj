@@ -1,0 +1,3372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DE75B84-28D1-4B82-9E4B-1230C246CFE9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tis</RootNamespace>
+    <AssemblyName>tis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.resources, Version=4.1.51116.0, Culture=ru, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DiadocApi, Version=2.23.0.0, Culture=neutral, PublicKeyToken=d18fd4c7ad3c243e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DiadocApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.WebUI.Excel.v10.2, Version=10.2.20102.1011, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics4.WebUI.Excel.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\BuhDoc\BuhDocNmkl.ascx" />
+    <Content Include="Account\BuhDoc\BuhDocZayavki.ascx" />
+    <Content Include="Account\BuhDoc\DocHistory.aspx" />
+    <Content Include="Account\BuhDoc\FormBuhDoc.aspx" />
+    <Content Include="Account\BuhDoc\IncomingBuhDoc.aspx" />
+    <Content Include="Account\BuhDoc\NastrFBD.aspx" />
+    <Content Include="Account\BuhDoc\OtklDoc.aspx" />
+    <Content Include="Account\BuhDoc\PrintForm\AktVRabot.aspx" />
+    <Content Include="Account\BuhDoc\PrintForm\ReestrIspFull.aspx" />
+    <Content Include="Account\BuhDoc\PrintForm\ReestrZakazchika.aspx" />
+    <Content Include="Account\BuhDoc\PrintForm\Schet.aspx" />
+    <Content Include="Account\BuhDoc\PrintForm\SchetFaktura2012.aspx" />
+    <Content Include="Account\BuhDoc\PrintForm\SchetFaktura2017.aspx" />
+    <Content Include="Account\BuhDoc\ReestrAktov.aspx" />
+    <Content Include="Account\BuhDoc\ReestrBuhDoc.aspx" />
+    <Content Include="Account\BuhDoc\SelectPechForm.aspx" />
+    <Content Include="Account\BuhDoc\UploadKod1C.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Defibrillator.aspx" />
+    <Content Include="Account\Dogovor\DogForm.aspx" />
+    <Content Include="Account\Dogovor\DogPostavki.aspx" />
+    <Content Include="Account\Dogovor\DogSuchUslov.ascx" />
+    <Content Include="Account\Dogovor\DogTypeSuchUsl.aspx" />
+    <Content Include="Account\Dogovor\ValueType.xml" />
+    <Content Include="Account\DopItems\Adminstat.aspx" />
+    <Content Include="Account\DopItems\AMgpsGeoProf.aspx" />
+    <Content Include="Account\DopItems\AMgpsTC.aspx" />
+    <Content Include="Account\DopItems\Bleep.mp3" />
+    <Content Include="Account\DopItems\Calendarpage.aspx" />
+    <Content Include="Account\DopItems\ContactInfKontrag.aspx" />
+    <Content Include="Account\DopItems\DopInfo.aspx" />
+    <Content Include="Account\DopItems\GPS_logs.aspx" />
+    <Content Include="Account\DopItems\GrepLogFiles.aspx" />
+    <Content Include="Account\DopItems\GrepLogGetUsers.aspx" />
+    <Content Include="Account\DopItems\Indicator.aspx" />
+    <Content Include="Account\DopItems\LicoLoginPrint.aspx" />
+    <Content Include="Account\DopItems\LoginList.aspx" />
+    <Content Include="Account\DopItems\MailSMTP.aspx" />
+    <Content Include="Account\DopItems\Mchd.aspx" />
+    <Content Include="Account\DopItems\OchistkaBaz.aspx" />
+    <Content Include="Account\DopItems\OchistkaBronMN.aspx" />
+    <Content Include="Account\DopItems\OchistkaPustoAuk.aspx" />
+    <Content Include="Account\DopItems\OchistkaZapis.aspx" />
+    <Content Include="Account\DopItems\PerevozchikRees.aspx" />
+    <Content Include="Account\DopItems\PerevozchikReit.aspx" />
+    <Content Include="Account\DopItems\pip4.mp3" />
+    <Content Include="Account\DopItems\ScanPodpPech.aspx" />
+    <Content Include="Account\DopItems\ShemaProezda.aspx" />
+    <Content Include="Account\DopItems\SpravAdmin.aspx" />
+    <Content Include="Account\DopItems\StatistSQL.aspx" />
+    <Content Include="Account\DopItems\StatusSelect.aspx" />
+    <Content Include="Account\DopItems\Stavka.aspx" />
+    <Content Include="Account\DopItems\TarifEdit.aspx" />
+    <Content Include="Account\DopItems\TarifPrintForm.aspx" />
+    <Content Include="Account\DopItems\TisChat.aspx" />
+    <Content Include="Account\DopItems\Vitrina.aspx" />
+    <Content Include="Account\DopItems\ZagolovVklagki.aspx" />
+    <Content Include="Account\EpdSrc\AsralReg.aspx" />
+    <Content Include="Account\EpdSrc\KonturProbe.aspx" />
+    <Content Include="Account\EpdSrc\SignEpd.aspx" />
+    <Content Include="Account\EpdSrc\SignEpdKontur.aspx" />
+    <Content Include="Account\ErrorObj1.aspx" />
+    <Content Include="Account\GlobalPages\Chat.aspx" />
+    <Content Include="Account\GlobalPages\Default.aspx" />
+    <Content Include="Account\GlobalPages\DefaultWebService.asmx" />
+    <Content Include="Account\GlobalPages\MenuWebUserControl.ascx" />
+    <Content Include="Account\Dogovor\DogReestr.aspx" />
+    <Content Include="Account\DopItems\FizLicoLog.aspx" />
+    <Content Include="Account\DopItems\ZayavkiAll.aspx" />
+    <Content Include="Account\GlobalPages\MenuWebUserControl2.ascx" />
+    <Content Include="Account\GlobalPages\Properties.aspx" />
+    <Content Include="Account\Guest\SpisokZakazov.aspx" />
+    <Content Include="Account\Guest\StrahRekviz.aspx" />
+    <Content Include="Account\Guest\StrahZayavlenie.aspx" />
+    <Content Include="Account\Guest\ZayavkiPostavch.aspx" />
+    <Content Include="Account\Help\Debug\Helps.txt" />
+    <Content Include="Account\Help\Debug\test.aspx" />
+    <Content Include="Account\Help\Debug\TEXTold.TXT" />
+    <Content Include="Account\Help\Debug\zamechVladimiru.txt" />
+    <Content Include="Account\Help\Help.aspx" />
+    <Content Include="Account\Help\HelpReesZai.aspx" />
+    <Content Include="Account\Map\MapDirecton.aspx" />
+    <Content Include="Account\Otchet\AddrControlPol.aspx" />
+    <Content Include="Account\Otchet\AktOpezdanieNK.aspx" />
+    <Content Include="Account\Otchet\AktOpozdanie.aspx" />
+    <Content Include="Account\Otchet\AukSoglasExcel.aspx" />
+    <Content Include="Account\Otchet\AukSravAnalElaz.aspx" />
+    <Content Include="Account\Otchet\AutomailSearch.aspx" />
+    <Content Include="Account\Otchet\AvarZayavki.aspx" />
+    <Content Include="Account\Otchet\ChartGZayavki.aspx" />
+    <Content Include="Account\Otchet\ChartsGoogle.aspx" />
+    <Content Include="Account\Otchet\CheckListAM.aspx" />
+    <Content Include="Account\Otchet\Doc_1cPeriod.aspx" />
+    <Content Include="Account\Otchet\Doverennosti.aspx" />
+    <Content Include="Account\Otchet\EtcpStat.aspx" />
+    <Content Include="Account\Otchet\ETCPzaperiod.aspx" />
+    <Content Include="Account\Otchet\ExpedRaspiska.aspx" />
+    <Content Include="Account\Otchet\ExpOtchets.aspx" />
+    <Content Include="Account\Help\Debug\TestTmp.aspx" />
+    <Content Include="Account\Map\GPSlocalList.aspx" />
+    <Content Include="Account\Map\MapGoog3vseTr.aspx" />
+    <Content Include="Account\Map\MapGoogle3vse.aspx" />
+    <Content Include="Account\Map\MapGoogleAPI3.aspx" />
+    <Content Include="Account\Otchet\GenOtchet.aspx" />
+    <Content Include="Account\Otchet\ItkReesZay.aspx" />
+    <Content Include="Account\Otchet\ItkSostAMperegon.aspx" />
+    <Content Include="Account\Otchet\ITKzayTranGruz.aspx" />
+    <Content Include="Account\Otchet\Journal1.aspx" />
+    <Content Include="Account\Otchet\MarshPoStavkam.aspx" />
+    <Content Include="Account\Otchet\NastrOtchet.aspx" />
+    <Content Include="Account\Otchet\NezakrReis.aspx" />
+    <Content Include="Account\Otchet\Opozavshie.aspx" />
+    <Content Include="Account\Otchet\OtcenkaPer.aspx" />
+    <Content Include="Account\Otchet\OtchetExpediotra.aspx" />
+    <Content Include="Account\Otchet\OtchetExpMonth.aspx" />
+    <Content Include="Account\Otchet\OtchetsHelp.aspx" />
+    <Content Include="Account\Otchet\OtkazOtReisa.aspx" />
+    <Content Include="Account\Otchet\PeregonITK_1c.aspx" />
+    <Content Include="Account\Otchet\PerevozFinance.aspx" />
+    <Content Include="Account\Otchet\PogrRazgrDatePRZ.aspx" />
+    <Content Include="Account\Otchet\PorojnyKast.aspx" />
+    <Content Include="Account\Otchet\ProsrPerDoc.aspx" />
+    <Content Include="Account\Otchet\RaspredZayMenedj.aspx" />
+    <Content Include="Account\Otchet\RasstanovkiExcel.aspx" />
+    <Content Include="Account\Otchet\RaznIsmenPlanPog.aspx" />
+    <Content Include="Account\Otchet\Ree1cExcel.aspx" />
+    <Content Include="Account\Otchet\Ree1cVypReeExcel.aspx" />
+    <Content Include="Account\Otchet\ReeDokRealPost.aspx" />
+    <Content Include="Account\Otchet\ReeGruzZayPeriod.aspx" />
+    <Content Include="Account\Otchet\ReeObiemZayPeriod.aspx" />
+    <Content Include="Account\Otchet\ReeReisDatePlanAM.aspx" />
+    <Content Include="Account\Otchet\ReeReisPoDateFakPogr.aspx" />
+    <Content Include="Account\Otchet\ReeVypnzakaz.aspx" />
+    <Content Include="Account\Otchet\ReeZaezdATerritAM.aspx" />
+    <Content Include="Account\Otchet\ReeZakazPolnoExcel.aspx" />
+    <Content Include="Account\Otchet\ReeZakazPolnoExcZak.aspx" />
+    <Content Include="Account\Otchet\ReeZayavDatePogr.aspx" />
+    <Content Include="Account\Otchet\ReeZayavPeriod.aspx" />
+    <Content Include="Account\Otchet\ReeZayavPlanPogPer.aspx" />
+    <Content Include="Account\Otchet\ReeZayavPolnoExcel.aspx" />
+    <Content Include="Account\Otchet\ReisAuk.aspx" />
+    <Content Include="Account\Otchet\ReisAukCena.aspx" />
+    <Content Include="Account\Otchet\ReisAuksion.aspx" />
+    <Content Include="Account\Otchet\ReisPeriodPlanPogr.aspx" />
+    <Content Include="Account\Otchet\ReisPeriodZakPogr.aspx" />
+    <Content Include="Account\Otchet\SostZayNaDatu.aspx" />
+    <Content Include="Account\Otchet\SostZayNaDatuK.aspx" />
+    <Content Include="Account\Otchet\SpecTehnika.aspx" />
+    <Content Include="Account\Otchet\SPUmejgorodReis.aspx" />
+    <Content Include="Account\Otchet\SPUmejgZayKratko.aspx" />
+    <Content Include="Account\Otchet\SPUOtkPogrRazg.aspx" />
+    <Content Include="Account\Otchet\StatOtchets.aspx" />
+    <Content Include="Account\Otchet\StatPerevoz.aspx" />
+    <Content Include="Account\Otchet\StatPoMenedjer.aspx" />
+    <Content Include="Account\Otchet\StatZayavokGod.aspx" />
+    <Content Include="Account\Otchet\StatZayGorodGruzopol.aspx" />
+    <Content Include="Account\Otchet\Stat_MG_MN.aspx" />
+    <Content Include="Account\Otchet\SvodkaZayPlanSozd.aspx" />
+    <Content Include="Account\Otchet\TKfioZaMes.aspx" />
+    <Content Include="Account\Otchet\UnivReisAdmin.aspx" />
+    <Content Include="Account\Otchet\UnivReisPeriod.aspx" />
+    <Content Include="Account\Otchet\UnivZayavPeriod.aspx" />
+    <Content Include="Account\Otchet\UnivZayVPeriod.aspx" />
+    <Content Include="Account\Otchet\VesGruzaAM.aspx" />
+    <Content Include="Account\Otchet\YBrinOtchet1.aspx" />
+    <Content Include="Account\Otchet\YBrinZadolj.aspx" />
+    <Content Include="Account\Otchet\Zayav1cTEM.aspx" />
+    <Content Include="Account\Otchet\ZayavdatPogrPeriod.aspx" />
+    <Content Include="Account\Otchet\ZayavkaVohr.aspx" />
+    <Content Include="Account\Otchet\ZayavPerevoz.aspx" />
+    <Content Include="Account\Otchet\ZayPeregon.aspx" />
+    <Content Include="Account\Otchet\ZayStatOkruga.aspx" />
+    <Content Include="Account\Spravochniki\Bank\BankDadata.aspx" />
+    <Content Include="Account\Spravochniki\Bank\BankRasSchetEd.aspx" />
+    <Content Include="Account\Spravochniki\BlackList.aspx" />
+    <Content Include="Account\Spravochniki\Bukva.aspx" />
+    <Content Include="Account\Spravochniki\Dogovory.aspx" />
+    <Content Include="Account\Spravochniki\FizLico\DoverKontragList.aspx" />
+    <Content Include="Account\Spravochniki\FizLico\PaspKemDadata.aspx" />
+    <Content Include="Account\Spravochniki\GruzExpeditor.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\AdressAdd.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\LoadMchdXml.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\SuggestCloud.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\SuggestCloudBel.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\SuggestCloudKaz.aspx" />
+    <Content Include="Account\Spravochniki\Marshrut\MarshrutPrint.aspx" />
+    <Content Include="Account\Spravochniki\MovizorPlace.aspx" />
+    <Content Include="Account\Spravochniki\Perevozchiki.aspx" />
+    <Content Include="Account\Spravochniki\Shortinfo.aspx" />
+    <Content Include="Account\Spravochniki\Transport\ScanAMdok.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TranPrint.aspx" />
+    <Content Include="Account\Work\AuksionGo.aspx" />
+    <Content Include="Account\Work\AuksView.aspx" />
+    <Content Include="Account\Work\AukViewNew.aspx" />
+    <Content Include="Account\Work\CreateZakaz.aspx" />
+    <Content Include="Account\Work\IncomingZ.aspx" />
+    <Content Include="Account\Help\Debug\TEXT.TXT" />
+    <Content Include="Account\Work\RasstanovkaTrEdit.aspx" />
+    <Content Include="Account\Work\RasstanovkaUse.aspx" />
+    <Content Include="Account\Work\ScanTendDoc.aspx" />
+    <Content Include="Account\Work\SendVitrina.aspx" />
+    <Content Include="Account\Work\StrokaMarshruta.aspx" />
+    <Content Include="Account\Work\TenderForm.aspx" />
+    <Content Include="Account\Work\TenderPerIncom.aspx" />
+    <Content Include="Account\Work\TenderZakRee.aspx" />
+    <Content Include="Account\Work\TendSoglStavForm.aspx.aspx" />
+    <Content Include="Account\Work\TendSoglStavOrg.aspx" />
+    <Content Include="Account\Work\VacantGruz.aspx" />
+    <Content Include="Account\Work\VacantView.aspx" />
+    <Content Include="Account\Work\ZakazForEdit.aspx" />
+    <Content Include="Account\Zakaz\AuksionSend.aspx" />
+    <Content Include="Account\Zakaz\BeginZakaz.aspx" />
+    <Content Include="Account\Zakaz\doverennopp.aspx" />
+    <Content Include="Account\Zakaz\DoverennostBron.aspx" />
+    <Content Include="Account\Zakaz\EdExpedRaspiska.aspx" />
+    <Content Include="Account\Zakaz\EdZakazZayav.aspx" />
+    <Content Include="Account\Zakaz\EdZakZVV.aspx" />
+    <Content Include="Account\Zakaz\ElZakZak.aspx" />
+    <Content Include="Account\Zakaz\ElZakZakPdf.aspx" />
+    <Content Include="Account\Zakaz\EndZakaz.aspx" />
+    <Content Include="Account\Zakaz\ETrN.aspx" />
+    <Content Include="Account\Zakaz\ETRN2026a.aspx" />
+    <Content Include="Account\Zakaz\ETRN_D.aspx" />
+    <Content Include="Account\Zakaz\ETrN_SBIS.aspx" />
+    <Content Include="Account\Zakaz\ForTrnAM.aspx" />
+    <Content Include="Account\Zakaz\GiveAM.aspx" />
+    <Content Include="Account\Zakaz\GruzView.aspx" />
+    <Content Include="Account\Zakaz\InsertAM.aspx" />
+    <Content Include="Account\Zakaz\LotVReis.aspx" />
+    <Content Include="Account\Zakaz\PlanTarif.aspx" />
+    <Content Include="Account\Zakaz\podpis.aspx" />
+    <Content Include="Account\Zakaz\Putevoilist.aspx" />
+    <Content Include="Account\Zakaz\RoutZakaz.aspx" />
+    <Content Include="Account\Zakaz\ScanDok.aspx" />
+    <Content Include="Account\Zakaz\SmotZakZVV.aspx" />
+    <Content Include="Account\Zakaz\TraceGroup.aspx" />
+    <Content Include="Account\Zakaz\TreisingARA.aspx" />
+    <Content Include="Account\Zakaz\TtnEdit.aspx" />
+    <Content Include="Account\Zakaz\VyborPerevozchAll.aspx" />
+    <Content Include="Account\Zakaz\ZadPogrExcel.aspx" />
+    <Content Include="Account\Zakaz\zayavkiinreis.aspx" />
+    <Content Include="Account\Zayavka\AstralEtcp.aspx" />
+    <Content Include="Account\Zayavka\brinZakazexc.aspx" />
+    <Content Include="Account\Zayavka\brinzakazform.aspx" />
+    <Content Include="Account\Zayavka\brinZayavkaPrintForm.aspx" />
+    <Content Include="Account\Zayavka\BronDealer.aspx" />
+    <Content Include="Account\Zayavka\Bronir.aspx" />
+    <Content Include="Account\Zayavka\CheckAMbron.aspx" />
+    <Content Include="Account\Zayavka\CheckAMzay.aspx" />
+    <Content Include="Account\Zayavka\DateTimePogRazg.aspx" />
+    <Content Include="Account\Zayavka\DoverControl.aspx" />
+    <Content Include="Account\Zayavka\GroupZayav.aspx" />
+    <Content Include="Account\Zayavka\PodpicDiadoc.aspx" />
+    <Content Include="Account\Zayavka\PodpisEtcp.aspx" />
+    <Content Include="Account\Zayavka\PodpisEtcpKP.aspx" />
+    <Content Include="Account\Zayavka\PodpisEtcpZak.aspx" />
+    <Content Include="Account\Zayavka\PodpisEtcpZakKP.aspx" />
+    <Content Include="Account\Zayavka\PorojniLoad.aspx" />
+    <Content Include="Account\Zayavka\printimage\Danaflex.jpg" />
+    <Content Include="Account\Zayavka\printimage\Dananano.jpg" />
+    <Content Include="Account\Zayavka\PrintPeregon.aspx" />
+    <Content Include="Account\Zayavka\ReisPrintEtcpK.aspx" />
+    <Content Include="Account\Zayavka\ScanPeregDok.aspx" />
+    <Content Include="Account\Zayavka\ScladGraf.aspx" />
+    <Content Include="Account\Zayavka\ScladSostoianie.aspx" />
+    <Content Include="Account\Zayavka\ScladTimes.aspx" />
+    <Content Include="Account\Zayavka\ScladUpr.aspx" />
+    <Content Include="Account\Zayavka\SignDocument.aspx" />
+    <Content Include="Account\Zayavka\Sluzhebnaya.aspx" />
+    <Content Include="Account\Zayavka\TimePogrRzag.aspx" />
+    <Content Include="Account\Zayavka\TimeScladGates.aspx" />
+    <Content Include="Account\Zayavka\TimeScladGroup.aspx" />
+    <Content Include="Account\Zayavka\ViewShemaProezda.aspx" />
+    <Content Include="Account\Zayavka\VoditelDan02.aspx" />
+    <Content Include="Account\Zayavka\VoditelKas01.aspx" />
+    <Content Include="Account\Zayavka\VoditelKas02.aspx" />
+    <Content Include="Account\Zayavka\VoditelTem02.aspx" />
+    <Content Include="Account\Zayavka\ZakazFormVirt.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintDogKast.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintDogKastMN.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintDogzay.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintForm.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintFormStd.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintInostran.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintKasta.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintKastExpedMN.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintKastJD.aspx" />
+    <Content Include="Account\Zayavka\ZakazPrintNevirt.aspx" />
+    <Content Include="Account\Zayavka\ZayavkaPeregonEx.aspx" />
+    <Content Include="Account\Zayavka\ZayavkaPrintExcelBr.aspx" />
+    <Content Include="Account\Zayavka\ZayavkaRees.aspx" />
+    <Content Include="Account\Help\HelpRus.aspx" />
+    <Content Include="Account\Spravochniki\Gruz.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\DopInfoKontragent.aspx" />
+    <Content Include="Account\Spravochniki\Marshrut\MarshrutEdit.aspx" />
+    <Content Include="Account\Spravochniki\Marshrut\SpisokMarshrutov.aspx" />
+    <Content Include="Account\Spravochniki\StavkiNDS.aspx" />
+    <Content Include="Account\Zayavka\Zayavka.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\Spravochniki\FizLico\FizLicoEdit.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\AdressEdit.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\Error.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\KontragentEdit.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\KontragentList.aspx" />
+    <Content Include="Account\Spravochniki\Adress\Strana.aspx" />
+    <Content Include="Account\Spravochniki\Adress\Gorod.aspx" />
+    <Content Include="Account\Spravochniki\Adress\TypeGorod.aspx" />
+    <Content Include="Account\Spravochniki\Adress\TypeUlica.aspx" />
+    <Content Include="Account\Spravochniki\Adress\Region.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\RSchetEdit.aspx" />
+    <Content Include="Account\Spravochniki\Bank\Valuta.aspx" />
+    <Content Include="Account\Spravochniki\Bank\BankGroup.aspx" />
+    <Content Include="Account\Spravochniki\Bank\BankList.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\GKontragentList.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\ScladEdit.aspx" />
+    <Content Include="Account\Spravochniki\Kontragent\ScladList.aspx" />
+    <Content Include="Account\Spravochniki\FizLico\FizLicoList.aspx" />
+    <Content Include="Account\Spravochniki\FizLico\Otdel.aspx" />
+    <Content Include="Account\Spravochniki\FizLico\Dolzhn.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TransportList.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRGrup.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRMarka.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRProizvod.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRType.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRTypeGruzopod.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRSposobPogruzki.aspx" />
+    <Content Include="Account\Spravochniki\Transport\TRPricep.aspx" />
+    <Content Include="Account\Spravochniki\Nomenklatura.aspx" />
+    <Content Include="Account\Zayavka\ZayavkaHelp.aspx" />
+    <Content Include="Account\Zayavka\ZayavkaPrintControl.ascx" />
+    <Content Include="Account\Zayavka\ZayavkaPrintForm.aspx" />
+    <Content Include="Account\Zayavka\ZayavkaViewForm.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\DiadocApi.dll" />
+    <Content Include="bin\Infragistics4.WebUI.Excel.v10.2.dll" />
+    <Content Include="bin\Ionic.Zip.dll" />
+    <Content Include="bin\tis.dll" />
+    <Content Include="bin\tis.pdb" />
+    <Content Include="bin\zxing.dll" />
+    <Content Include="daninform.aspx" />
+    <Content Include="danvochered.aspx" />
+    <Content Include="Eltrans\DanafNovison.asmx" />
+    <Content Include="Eltrans\Registr.aspx" />
+    <Content Include="Eltrans\ScladTek.asmx" />
+    <Content Include="GooglePlus.aspx" />
+    <Content Include="Images\16x16\add-circle.png" />
+    <Content Include="Images\16x16\add2.gif" />
+    <Content Include="Images\16x16\ajax-loader2.gif" />
+    <Content Include="Images\16x16\am_koleso.gif" />
+    <Content Include="Images\16x16\arrow_left_green.gif" />
+    <Content Include="Images\16x16\arrow_right_green.gif" />
+    <Content Include="Images\16x16\avtozayavperegon.GIF" />
+    <Content Include="Images\16x16\blank.png" />
+    <Content Include="Images\16x16\books.gif" />
+    <Content Include="Images\16x16\briefcase.gif" />
+    <Content Include="Images\16x16\cancelbutton.gif" />
+    <Content Include="Images\16x16\carplus16x16.png" />
+    <Content Include="Images\16x16\car_compact_blue.gif" />
+    <Content Include="Images\16x16\car_compact_grey.gif" />
+    <Content Include="Images\16x16\car_compact_orange.gif" />
+    <Content Include="Images\16x16\chatree.png" />
+    <Content Include="Images\16x16\chatreenews.png" />
+    <Content Include="Images\16x16\check.png" />
+    <Content Include="Images\16x16\check2.gif" />
+    <Content Include="Images\16x16\check2litegreen.gif" />
+    <Content Include="Images\16x16\clock-rotate-right.png" />
+    <Content Include="Images\16x16\cloudfrom.gif" />
+    <Content Include="Images\16x16\cloudto.gif" />
+    <Content Include="Images\16x16\collapse.gif" />
+    <Content Include="Images\16x16\collaps_down.gif" />
+    <Content Include="Images\16x16\collaps_up.gif" />
+    <Content Include="Images\16x16\copy.gif" />
+    <Content Include="Images\16x16\cube_green.jpg" />
+    <Content Include="Images\16x16\cup16.png" />
+    <Content Include="Images\16x16\delete.gif" />
+    <Content Include="Images\16x16\delete2.gif" />
+    <Content Include="Images\16x16\delete2rose.gif" />
+    <Content Include="Images\16x16\disk_blue.gif" />
+    <Content Include="Images\16x16\disk_liteblue.gif" />
+    <Content Include="Images\16x16\document.gif" />
+    <Content Include="Images\16x16\documents.gif" />
+    <Content Include="Images\16x16\document_check.gif" />
+    <Content Include="Images\16x16\document_delete.gif" />
+    <Content Include="Images\16x16\document_dirty.gif" />
+    <Content Include="Images\16x16\document_edit.gif" />
+    <Content Include="Images\16x16\document_gear.gif" />
+    <Content Include="Images\16x16\document_into.gif" />
+    <Content Include="Images\16x16\document_out.gif" />
+    <Content Include="Images\16x16\document_per.gif" />
+    <Content Include="Images\16x16\document_preferences.gif" />
+    <Content Include="Images\16x16\document_text.gif" />
+    <Content Include="Images\16x16\document_zak.gif" />
+    <Content Include="Images\16x16\document_zakper.gif" />
+    <Content Include="Images\16x16\document_zoom_in.gif" />
+    <Content Include="Images\16x16\dot-chart.gif" />
+    <Content Include="Images\16x16\double-check.png" />
+    <Content Include="Images\16x16\Etcp1_black.png" />
+    <Content Include="Images\16x16\Etcp1_brown.png" />
+    <Content Include="Images\16x16\Etcp1_green.png" />
+    <Content Include="Images\16x16\Etcp_1.png" />
+    <Content Include="Images\16x16\Etcp_2.png" />
+    <Content Include="Images\16x16\excel2003.gif" />
+    <Content Include="Images\16x16\factory.gif" />
+    <Content Include="Images\16x16\folder.gif" />
+    <Content Include="Images\16x16\folder_closed.gif" />
+    <Content Include="Images\16x16\folder_into.gif" />
+    <Content Include="Images\16x16\folder_out.gif" />
+    <Content Include="Images\16x16\form_blue.gif" />
+    <Content Include="Images\16x16\gears.gif" />
+    <Content Include="Images\16x16\gear_delete.gif" />
+    <Content Include="Images\16x16\gear_run.gif" />
+    <Content Include="Images\16x16\greybox.png" />
+    <Content Include="Images\16x16\Import-Excel.gif" />
+    <Content Include="Images\16x16\info-mark2.gif" />
+    <Content Include="Images\16x16\info-mark3.gif" />
+    <Content Include="Images\16x16\karand_lg.gif" />
+    <Content Include="Images\16x16\karand_per.gif" />
+    <Content Include="Images\16x16\Lock16.png" />
+    <Content Include="Images\16x16\magic-wand2.gif" />
+    <Content Include="Images\16x16\magnifier4.png" />
+    <Content Include="Images\16x16\menu_16.png" />
+    <Content Include="Images\16x16\navigate_down.gif" />
+    <Content Include="Images\16x16\navigate_left.gif" />
+    <Content Include="Images\16x16\navigate_left2.gif" />
+    <Content Include="Images\16x16\navigate_plus.gif" />
+    <Content Include="Images\16x16\navigate_right.gif" />
+    <Content Include="Images\16x16\navigate_right2.gif" />
+    <Content Include="Images\16x16\navigate_up.gif" />
+    <Content Include="Images\16x16\pechat.gif" />
+    <Content Include="Images\16x16\pencil.gif" />
+    <Content Include="Images\16x16\podpis.gif" />
+    <Content Include="Images\16x16\print.gif" />
+    <Content Include="Images\16x16\question-mark.gif" />
+    <Content Include="Images\16x16\redo.gif" />
+    <Content Include="Images\16x16\refresh_gray.gif" />
+    <Content Include="Images\16x16\rePage.gif" />
+    <Content Include="Images\16x16\save_gray.gif" />
+    <Content Include="Images\16x16\security_agent.gif" />
+    <Content Include="Images\16x16\selectbutton.gif" />
+    <Content Include="Images\16x16\squaregreen.gif" />
+    <Content Include="Images\16x16\squaremagenta.gif" />
+    <Content Include="Images\16x16\star16_b.gif" />
+    <Content Include="Images\16x16\star_01.gif" />
+    <Content Include="Images\16x16\star_03.gif" />
+    <Content Include="Images\16x16\star_05.gif" />
+    <Content Include="Images\16x16\star_07.gif" />
+    <Content Include="Images\16x16\star_09.gif" />
+    <Content Include="Images\16x16\star_brown.gif" />
+    <Content Include="Images\16x16\star_gray.gif" />
+    <Content Include="Images\16x16\statz_0.gif" />
+    <Content Include="Images\16x16\statz_1.gif" />
+    <Content Include="Images\16x16\statz_10.gif" />
+    <Content Include="Images\16x16\statz_2.gif" />
+    <Content Include="Images\16x16\statz_3.gif" />
+    <Content Include="Images\16x16\statz_4.gif" />
+    <Content Include="Images\16x16\statz_5.gif" />
+    <Content Include="Images\16x16\statz_6.gif" />
+    <Content Include="Images\16x16\statz_7.gif" />
+    <Content Include="Images\16x16\statz_8.gif" />
+    <Content Include="Images\16x16\statz_9.gif" />
+    <Content Include="Images\16x16\tenstat1.png" />
+    <Content Include="Images\16x16\tenstat2.png" />
+    <Content Include="Images\16x16\tenstat3.png" />
+    <Content Include="Images\16x16\tenstat4.png" />
+    <Content Include="Images\16x16\tenstat5.png" />
+    <Content Include="Images\16x16\tenst_winner.png" />
+    <Content Include="Images\16x16\text.gif" />
+    <Content Include="Images\16x16\truck_blue.gif" />
+    <Content Include="Images\16x16\undo.gif" />
+    <Content Include="Images\16x16\user1_preferences.gif" />
+    <Content Include="Images\16x16\vinovatda.png" />
+    <Content Include="Images\16x16\vinovatnet.png" />
+    <Content Include="Images\16x16\warning-triangle.png" />
+    <Content Include="Images\16x16\warning.gif" />
+    <Content Include="Images\16x16\Y_greenbox.png" />
+    <Content Include="Images\16x16\Y_greybox.png" />
+    <Content Include="Images\16x16\zagrPeregon.png" />
+    <Content Include="Images\24x24\Attach24.gif" />
+    <Content Include="Images\24x24\Attach24.png" />
+    <Content Include="Images\24x24\Attach24.svg" />
+    <Content Include="Images\24x24\Back24.gif" />
+    <Content Include="Images\24x24\Back24.png" />
+    <Content Include="Images\24x24\Back24.svg" />
+    <Content Include="Images\24x24\Chat24.png" />
+    <Content Include="Images\24x24\Chat24.svg" />
+    <Content Include="Images\24x24\Chatnews24.png" />
+    <Content Include="Images\24x24\Chatnews24.svg" />
+    <Content Include="Images\24x24\ChatSend.png" />
+    <Content Include="Images\24x24\close.gif" />
+    <Content Include="Images\24x24\db-Add.gif" />
+    <Content Include="Images\24x24\db-First.gif" />
+    <Content Include="Images\24x24\db-Last.gif" />
+    <Content Include="Images\24x24\db-Next.gif" />
+    <Content Include="Images\24x24\db-Previous.gif" />
+    <Content Include="Images\24x24\db-Refresh.gif" />
+    <Content Include="Images\24x24\excel_24.gif" />
+    <Content Include="Images\24x24\Help.gif" />
+    <Content Include="Images\24x24\Help.png" />
+    <Content Include="Images\24x24\Help.svg" />
+    <Content Include="Images\24x24\Home.gif" />
+    <Content Include="Images\24x24\todolist.gif" />
+    <Content Include="Images\24x24\Tools.gif" />
+    <Content Include="Images\24x24\updown.png" />
+    <Content Include="Images\24x24\worksheetoptions.gif" />
+    <Content Include="Images\32x32\tisicon.jpg" />
+    <Content Include="Images\about.gif" />
+    <Content Include="Images\accepted.gif" />
+    <Content Include="Images\acceptedA.gif" />
+    <Content Include="Images\acceptedtmp.gif" />
+    <Content Include="Images\acceptit.gif" />
+    <Content Include="Images\acceptitA.gif" />
+    <Content Include="Images\acceptittmporange.gif" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\auto_0.gif" />
+    <Content Include="Images\auto_1.gif" />
+    <Content Include="Images\auto_2.gif" />
+    <Content Include="Images\background-body.gif" />
+    <Content Include="Images\background-footer.gif" />
+    <Content Include="Images\background-footer_01.gif" />
+    <Content Include="Images\background-footer_02.gif" />
+    <Content Include="Images\background-footer_03.gif" />
+    <Content Include="Images\background-nav-01.gif" />
+    <Content Include="Images\background-nav-02.gif" />
+    <Content Include="Images\background-nav-03.gif" />
+    <Content Include="Images\background-subnav-01.gif" />
+    <Content Include="Images\background-subnav-02.gif" />
+    <Content Include="Images\background-subnav-03.gif" />
+    <Content Include="Images\background_table.jpg" />
+    <Content Include="Images\background_table1.jpg" />
+    <Content Include="Images\background_table1.png" />
+    <Content Include="Images\back_th.gif" />
+    <Content Include="Images\back_th2.gif" />
+    <Content Include="Images\bascend.gif" />
+    <Content Include="Images\bdescend.gif" />
+    <Content Include="Images\bdescopy.gif" />
+    <Content Include="Images\contacts.gif" />
+    <Content Include="Images\go.gif" />
+    <Content Include="Images\handcirckle.jpg" />
+    <Content Include="Images\handfinger.jpg" />
+    <Content Include="Images\header-divider.gif" />
+    <Content Include="Images\help_man.gif" />
+    <Content Include="Images\home.gif" />
+    <Content Include="Images\icon_del_small.gif" />
+    <Content Include="Images\koleco.gif" />
+    <Content Include="Images\koleco1.gif" />
+    <Content Include="Images\koleco2.gif" />
+    <Content Include="Images\kwikdisk.png" />
+    <Content Include="Images\Logo.gif" />
+    <Content Include="Images\Logo_kast.gif" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\Misc\arrow.cur" />
+    <Content Include="Images\Misc\arrow_5.cur" />
+    <Content Include="Images\Misc\listok.cur" />
+    <Content Include="Images\Misc\mouse3.cur" />
+    <Content Include="Images\Misc\pencil_3.cur" />
+    <Content Include="Images\napr.bmp" />
+    <Content Include="Images\news.gif" />
+    <Content Include="Images\pero1.jpg" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\Podpis\Shablon.jpg" />
+    <Content Include="Images\QR_ochered.png" />
+    <Content Include="Images\Refresh.gif" />
+    <Content Include="Images\ReisZayav.gif" />
+    <Content Include="Images\services.gif" />
+    <Content Include="Images\sprite.png" />
+    <Content Include="Account\AutoComplete.asmx" />
+    <Content Include="Images\Svetofor_bel.gif" />
+    <Content Include="Images\Svetofor_kr.png" />
+    <Content Include="Images\Svetofor_ser.gif" />
+    <Content Include="Images\Svetofor_temno_zel.png" />
+    <Content Include="Images\Svetofor_zel.png" />
+    <Content Include="Images\Svetofor_zel_cv.png" />
+    <Content Include="Images\Svetofor_zh.png" />
+    <Content Include="Images\Svetofor_zpo.png" />
+    <Content Include="Images\SvetProblem.png" />
+    <Content Include="Images\SvetStat0.png" />
+    <Content Include="Images\SvetStat1.png" />
+    <Content Include="Images\SvetStat2.png" />
+    <Content Include="Images\SvetStat3.png" />
+    <Content Include="Images\SvetStat4.png" />
+    <Content Include="Images\SvetStat5.png" />
+    <Content Include="Images\SvetStat6.png" />
+    <Content Include="Images\SvetStat7.png" />
+    <Content Include="Images\SvetStat8.png" />
+    <Content Include="Images\SvetStat9.png" />
+    <Content Include="Images\Tabs\tab-active-left.gif" />
+    <Content Include="Images\Tabs\tab-active-right.gif" />
+    <Content Include="Images\Tabs\tab-active.gif" />
+    <Content Include="Images\Tabs\tab-hover-left.gif" />
+    <Content Include="Images\Tabs\tab-hover-right.gif" />
+    <Content Include="Images\Tabs\tab-hover.gif" />
+    <Content Include="Images\Tabs\tab-left.gif" />
+    <Content Include="Images\Tabs\tab-line.gif" />
+    <Content Include="Images\Tabs\tab-right.gif" />
+    <Content Include="Images\Tabs\tab.gif" />
+    <Content Include="Images\tis_logo.png" />
+    <Content Include="Images\tt_bottom.gif" />
+    <Content Include="Images\tt_left.gif" />
+    <Content Include="Images\tt_top.gif" />
+    <Content Include="Images\Vector\call.svg" />
+    <Content Include="Images\Vector\check-circle.svg" />
+    <Content Include="Images\Vector\check.svg" />
+    <Content Include="Images\Vector\Etcp.svg" />
+    <Content Include="Images\Vector\Etcp1_black.svg" />
+    <Content Include="Images\Vector\Etcp1_brown.svg" />
+    <Content Include="Images\Vector\Etcp1_green.svg" />
+    <Content Include="Images\Vector\Etcp_1.svg" />
+    <Content Include="Images\Vector\Etcp_2.svg" />
+    <Content Include="Images\Vector\goden.svg" />
+    <Content Include="Images\Vector\mail.svg" />
+    <Content Include="Images\Vector\menu.svg" />
+    <Content Include="Images\Vector\minus-circle.svg" />
+    <Content Include="Images\Vector\negoden.svg" />
+    <Content Include="Images\Vector\tis_logo_28.png" />
+    <Content Include="Images\Vector\tis_logo_28.svg" />
+    <Content Include="Images\Vector\warning-triangle.svg" />
+    <Content Include="Images\vitrina.gif" />
+    <Content Include="index.aspx" />
+    <Content Include="kasinform.aspx" />
+    <Content Include="kasvochered.aspx" />
+    <Content Include="MessageFrame.aspx" />
+    <Content Include="Modules\Preferences.xml" />
+    <Content Include="News.aspx" />
+    <Content Include="Scripts\cadesplugin_api.js" />
+    <Content Include="Scripts\excanvas.compiled.js" />
+    <Content Include="Scripts\excanvas.js" />
+    <Content Include="Scripts\GoogleAnalytics.inc" />
+    <Content Include="Scripts\htmlprintpreview.inc" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.41f.js" />
+    <Content Include="Scripts\JQ\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\JQ\jquery.xdomainrequest.min.1.0.3.js" />
+    <Content Include="Scripts\marshrut_print.inc" />
+    <Content Include="Scripts\selecttext.js" />
+    <Content Include="Scripts\tableresize.js" />
+    <Content Include="SimpleMsg.aspx" />
+    <Content Include="Styles\Adress.css" />
+    <Content Include="Styles\Default.css" />
+    <Content Include="Styles\ListView.css" />
+    <Content Include="Styles\PopupWindow.css" />
+    <Content Include="Styles\printstyle.css" />
+    <Content Include="Styles\printstylesluzheb.css" />
+    <Content Include="Styles\printstylezakaz.css" />
+    <Content Include="Styles\Printtable.css" />
+    <Content Include="Styles\printtable8.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Testzay.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="wsize.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\BuhDocNmkl.ascx.cs">
+      <DependentUpon>BuhDocNmkl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\BuhDocNmkl.ascx.designer.cs">
+      <DependentUpon>BuhDocNmkl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\BuhDocZayavki.ascx.cs">
+      <DependentUpon>BuhDocZayavki.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\BuhDocZayavki.ascx.designer.cs">
+      <DependentUpon>BuhDocZayavki.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\DocHistory.aspx.cs">
+      <DependentUpon>DocHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\DocHistory.aspx.designer.cs">
+      <DependentUpon>DocHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\FormBuhDoc.aspx.cs">
+      <DependentUpon>FormBuhDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\FormBuhDoc.aspx.designer.cs">
+      <DependentUpon>FormBuhDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\IncomingBuhDoc.aspx.cs">
+      <DependentUpon>IncomingBuhDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\IncomingBuhDoc.aspx.designer.cs">
+      <DependentUpon>IncomingBuhDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\NastrFBD.aspx.cs">
+      <DependentUpon>NastrFBD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\NastrFBD.aspx.designer.cs">
+      <DependentUpon>NastrFBD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\OtklDoc.aspx.cs">
+      <DependentUpon>OtklDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\OtklDoc.aspx.designer.cs">
+      <DependentUpon>OtklDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\AktVRabot.aspx.cs">
+      <DependentUpon>AktVRabot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\AktVRabot.aspx.designer.cs">
+      <DependentUpon>AktVRabot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\ReestrIspFull.aspx.cs">
+      <DependentUpon>ReestrIspFull.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\ReestrIspFull.aspx.designer.cs">
+      <DependentUpon>ReestrIspFull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\ReestrZakazchika.aspx.cs">
+      <DependentUpon>ReestrZakazchika.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\ReestrZakazchika.aspx.designer.cs">
+      <DependentUpon>ReestrZakazchika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\Schet.aspx.cs">
+      <DependentUpon>Schet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\Schet.aspx.designer.cs">
+      <DependentUpon>Schet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\SchetFaktura2012.aspx.cs">
+      <DependentUpon>SchetFaktura2012.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\SchetFaktura2012.aspx.designer.cs">
+      <DependentUpon>SchetFaktura2012.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\SchetFaktura2017.aspx.cs">
+      <DependentUpon>SchetFaktura2017.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\PrintForm\SchetFaktura2017.aspx.designer.cs">
+      <DependentUpon>SchetFaktura2017.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\ReestrAktov.aspx.cs">
+      <DependentUpon>ReestrAktov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\ReestrAktov.aspx.designer.cs">
+      <DependentUpon>ReestrAktov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\ReestrBuhDoc.aspx.cs">
+      <DependentUpon>ReestrBuhDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\ReestrBuhDoc.aspx.designer.cs">
+      <DependentUpon>ReestrBuhDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\SelectPechForm.aspx.cs">
+      <DependentUpon>SelectPechForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\SelectPechForm.aspx.designer.cs">
+      <DependentUpon>SelectPechForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BuhDoc\UploadKod1C.aspx.cs">
+      <DependentUpon>UploadKod1C.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BuhDoc\UploadKod1C.aspx.designer.cs">
+      <DependentUpon>UploadKod1C.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Defibrillator.aspx.cs">
+      <DependentUpon>Defibrillator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Defibrillator.aspx.designer.cs">
+      <DependentUpon>Defibrillator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogForm.aspx.cs">
+      <DependentUpon>DogForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogForm.aspx.designer.cs">
+      <DependentUpon>DogForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogPostavki.aspx.cs">
+      <DependentUpon>DogPostavki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogPostavki.aspx.designer.cs">
+      <DependentUpon>DogPostavki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogSuchUslov.ascx.cs">
+      <DependentUpon>DogSuchUslov.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogSuchUslov.ascx.designer.cs">
+      <DependentUpon>DogSuchUslov.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogTypeSuchUsl.aspx.cs">
+      <DependentUpon>DogTypeSuchUsl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogTypeSuchUsl.aspx.designer.cs">
+      <DependentUpon>DogTypeSuchUsl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\Adminstat.aspx.cs">
+      <DependentUpon>Adminstat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\Adminstat.aspx.designer.cs">
+      <DependentUpon>Adminstat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\AMgpsGeoProf.aspx.cs">
+      <DependentUpon>AMgpsGeoProf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\AMgpsGeoProf.aspx.designer.cs">
+      <DependentUpon>AMgpsGeoProf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\AMgpsTC.aspx.cs">
+      <DependentUpon>AMgpsTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\AMgpsTC.aspx.designer.cs">
+      <DependentUpon>AMgpsTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\Calendarpage.aspx.cs">
+      <DependentUpon>Calendarpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\Calendarpage.aspx.designer.cs">
+      <DependentUpon>Calendarpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\ContactInfKontrag.aspx.cs">
+      <DependentUpon>ContactInfKontrag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\ContactInfKontrag.aspx.designer.cs">
+      <DependentUpon>ContactInfKontrag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\DopInfo.aspx.cs">
+      <DependentUpon>DopInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\DopInfo.aspx.designer.cs">
+      <DependentUpon>DopInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\GPS_logs.aspx.cs">
+      <DependentUpon>GPS_logs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\GPS_logs.aspx.designer.cs">
+      <DependentUpon>GPS_logs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\GrepLogFiles.aspx.cs">
+      <DependentUpon>GrepLogFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\GrepLogFiles.aspx.designer.cs">
+      <DependentUpon>GrepLogFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\GrepLogGetUsers.aspx.cs">
+      <DependentUpon>GrepLogGetUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\GrepLogGetUsers.aspx.designer.cs">
+      <DependentUpon>GrepLogGetUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\Indicator.aspx.cs">
+      <DependentUpon>Indicator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\Indicator.aspx.designer.cs">
+      <DependentUpon>Indicator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\LicoLoginPrint.aspx.cs">
+      <DependentUpon>LicoLoginPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\LicoLoginPrint.aspx.designer.cs">
+      <DependentUpon>LicoLoginPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\LoginList.aspx.cs">
+      <DependentUpon>LoginList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\LoginList.aspx.designer.cs">
+      <DependentUpon>LoginList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\MailSMTP.aspx.cs">
+      <DependentUpon>MailSMTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\MailSMTP.aspx.designer.cs">
+      <DependentUpon>MailSMTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\Mchd.aspx.cs">
+      <DependentUpon>Mchd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\Mchd.aspx.designer.cs">
+      <DependentUpon>Mchd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaBaz.aspx.cs">
+      <DependentUpon>OchistkaBaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaBaz.aspx.designer.cs">
+      <DependentUpon>OchistkaBaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaBronMN.aspx.cs">
+      <DependentUpon>OchistkaBronMN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaBronMN.aspx.designer.cs">
+      <DependentUpon>OchistkaBronMN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaPustoAuk.aspx.cs">
+      <DependentUpon>OchistkaPustoAuk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaPustoAuk.aspx.designer.cs">
+      <DependentUpon>OchistkaPustoAuk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaZapis.aspx.cs">
+      <DependentUpon>OchistkaZapis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\OchistkaZapis.aspx.designer.cs">
+      <DependentUpon>OchistkaZapis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\PerevozchikRees.aspx.cs">
+      <DependentUpon>PerevozchikRees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\PerevozchikRees.aspx.designer.cs">
+      <DependentUpon>PerevozchikRees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\PerevozchikReit.aspx.cs">
+      <DependentUpon>PerevozchikReit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\PerevozchikReit.aspx.designer.cs">
+      <DependentUpon>PerevozchikReit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\ScanPodpPech.aspx.cs">
+      <DependentUpon>ScanPodpPech.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\ScanPodpPech.aspx.designer.cs">
+      <DependentUpon>ScanPodpPech.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\ShemaProezda.aspx.cs">
+      <DependentUpon>ShemaProezda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\ShemaProezda.aspx.designer.cs">
+      <DependentUpon>ShemaProezda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\SpravAdmin.aspx.cs">
+      <DependentUpon>SpravAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\SpravAdmin.aspx.designer.cs">
+      <DependentUpon>SpravAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\StatistSQL.aspx.cs">
+      <DependentUpon>StatistSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\StatistSQL.aspx.designer.cs">
+      <DependentUpon>StatistSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\StatusSelect.aspx.cs">
+      <DependentUpon>StatusSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\StatusSelect.aspx.designer.cs">
+      <DependentUpon>StatusSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\Stavka.aspx.cs">
+      <DependentUpon>Stavka.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\Stavka.aspx.designer.cs">
+      <DependentUpon>Stavka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\TarifEdit.aspx.cs">
+      <DependentUpon>TarifEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\TarifEdit.aspx.designer.cs">
+      <DependentUpon>TarifEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\TarifPrintForm.aspx.cs">
+      <DependentUpon>TarifPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\TarifPrintForm.aspx.designer.cs">
+      <DependentUpon>TarifPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\TisChat.aspx.cs">
+      <DependentUpon>TisChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\TisChat.aspx.designer.cs">
+      <DependentUpon>TisChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\Vitrina.aspx.cs">
+      <DependentUpon>Vitrina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\Vitrina.aspx.designer.cs">
+      <DependentUpon>Vitrina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\ZagolovVklagki.aspx.cs">
+      <DependentUpon>ZagolovVklagki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\ZagolovVklagki.aspx.designer.cs">
+      <DependentUpon>ZagolovVklagki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EpdSrc\AsralReg.aspx.cs">
+      <DependentUpon>AsralReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EpdSrc\AsralReg.aspx.designer.cs">
+      <DependentUpon>AsralReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EpdSrc\SignEpd.aspx.cs">
+      <DependentUpon>SignEpd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EpdSrc\SignEpd.aspx.designer.cs">
+      <DependentUpon>SignEpd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EpdSrc\SignEpdKontur.aspx.cs">
+      <DependentUpon>SignEpdKontur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EpdSrc\SignEpdKontur.aspx.designer.cs">
+      <DependentUpon>SignEpdKontur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ErrorObj1.aspx.cs">
+      <DependentUpon>ErrorObj1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ErrorObj1.aspx.designer.cs">
+      <DependentUpon>ErrorObj1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GlobalPages\DefaultWebService.asmx.cs">
+      <DependentUpon>DefaultWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\MenuWebUserControl.ascx.cs">
+      <DependentUpon>MenuWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\MenuWebUserControl.ascx.designer.cs">
+      <DependentUpon>MenuWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Global.Master.cs">
+      <DependentUpon>Global.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Global.Master.designer.cs">
+      <DependentUpon>Global.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogReestr.aspx.cs">
+      <DependentUpon>DogReestr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dogovor\DogReestr.aspx.designer.cs">
+      <DependentUpon>DogReestr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\FizLicoLog.aspx.cs">
+      <DependentUpon>FizLicoLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\FizLicoLog.aspx.designer.cs">
+      <DependentUpon>FizLicoLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\DopItems\ZayavkiAll.aspx.cs">
+      <DependentUpon>ZayavkiAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DopItems\ZayavkiAll.aspx.designer.cs">
+      <DependentUpon>ZayavkiAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GlobalPages\MenuWebUserControl2.ascx.cs">
+      <DependentUpon>MenuWebUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\MenuWebUserControl2.ascx.designer.cs">
+      <DependentUpon>MenuWebUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Properties.aspx.cs">
+      <DependentUpon>Properties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\GlobalPages\Properties.aspx.designer.cs">
+      <DependentUpon>Properties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Guest\SpisokZakazov.aspx.cs">
+      <DependentUpon>SpisokZakazov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Guest\SpisokZakazov.aspx.designer.cs">
+      <DependentUpon>SpisokZakazov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Guest\StrahRekviz.aspx.cs">
+      <DependentUpon>StrahRekviz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Guest\StrahRekviz.aspx.designer.cs">
+      <DependentUpon>StrahRekviz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Guest\StrahZayavlenie.aspx.cs">
+      <DependentUpon>StrahZayavlenie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Guest\StrahZayavlenie.aspx.designer.cs">
+      <DependentUpon>StrahZayavlenie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Guest\ZayavkiPostavch.aspx.cs">
+      <DependentUpon>ZayavkiPostavch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Guest\ZayavkiPostavch.aspx.designer.cs">
+      <DependentUpon>ZayavkiPostavch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Help\Debug\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Help\Debug\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Help\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Help\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Help\HelpReesZai.aspx.cs">
+      <DependentUpon>HelpReesZai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Help\HelpReesZai.aspx.designer.cs">
+      <DependentUpon>HelpReesZai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Map\MapDirecton.aspx.cs">
+      <DependentUpon>MapDirecton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Map\MapDirecton.aspx.designer.cs">
+      <DependentUpon>MapDirecton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AddrControlPol.aspx.cs">
+      <DependentUpon>AddrControlPol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AddrControlPol.aspx.designer.cs">
+      <DependentUpon>AddrControlPol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AktOpezdanieNK.aspx.cs">
+      <DependentUpon>AktOpezdanieNK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AktOpezdanieNK.aspx.designer.cs">
+      <DependentUpon>AktOpezdanieNK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AktOpozdanie.aspx.cs">
+      <DependentUpon>AktOpozdanie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AktOpozdanie.aspx.designer.cs">
+      <DependentUpon>AktOpozdanie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AukSoglasExcel.aspx.cs">
+      <DependentUpon>AukSoglasExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AukSoglasExcel.aspx.designer.cs">
+      <DependentUpon>AukSoglasExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AukSravAnalElaz.aspx.cs">
+      <DependentUpon>AukSravAnalElaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AukSravAnalElaz.aspx.designer.cs">
+      <DependentUpon>AukSravAnalElaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AutomailSearch.aspx.cs">
+      <DependentUpon>AutomailSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AutomailSearch.aspx.designer.cs">
+      <DependentUpon>AutomailSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\AvarZayavki.aspx.cs">
+      <DependentUpon>AvarZayavki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\AvarZayavki.aspx.designer.cs">
+      <DependentUpon>AvarZayavki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ChartGZayavki.aspx.cs">
+      <DependentUpon>ChartGZayavki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ChartGZayavki.aspx.designer.cs">
+      <DependentUpon>ChartGZayavki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ChartsGoogle.aspx.cs">
+      <DependentUpon>ChartsGoogle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ChartsGoogle.aspx.designer.cs">
+      <DependentUpon>ChartsGoogle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\CheckListAM.aspx.cs">
+      <DependentUpon>CheckListAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\CheckListAM.aspx.designer.cs">
+      <DependentUpon>CheckListAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Doc_1cPeriod.aspx.cs">
+      <DependentUpon>Doc_1cPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Doc_1cPeriod.aspx.designer.cs">
+      <DependentUpon>Doc_1cPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Doverennosti.aspx.cs">
+      <DependentUpon>Doverennosti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Doverennosti.aspx.designer.cs">
+      <DependentUpon>Doverennosti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\EtcpStat.aspx.cs">
+      <DependentUpon>EtcpStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\EtcpStat.aspx.designer.cs">
+      <DependentUpon>EtcpStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ETCPzaperiod.aspx.cs">
+      <DependentUpon>ETCPzaperiod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ETCPzaperiod.aspx.designer.cs">
+      <DependentUpon>ETCPzaperiod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ExpedRaspiska.aspx.cs">
+      <DependentUpon>ExpedRaspiska.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ExpedRaspiska.aspx.designer.cs">
+      <DependentUpon>ExpedRaspiska.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ExpOtchets.aspx.cs">
+      <DependentUpon>ExpOtchets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ExpOtchets.aspx.designer.cs">
+      <DependentUpon>ExpOtchets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Help\Debug\TestTmp.aspx.cs">
+      <DependentUpon>TestTmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Help\Debug\TestTmp.aspx.designer.cs">
+      <DependentUpon>TestTmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Map\GPSlocalList.aspx.cs">
+      <DependentUpon>GPSlocalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Map\GPSlocalList.aspx.designer.cs">
+      <DependentUpon>GPSlocalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Map\MapGoog3vseTr.aspx.cs">
+      <DependentUpon>MapGoog3vseTr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Map\MapGoog3vseTr.aspx.designer.cs">
+      <DependentUpon>MapGoog3vseTr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Map\MapGoogle3vse.aspx.cs">
+      <DependentUpon>MapGoogle3vse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Map\MapGoogle3vse.aspx.designer.cs">
+      <DependentUpon>MapGoogle3vse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Map\MapGoogleAPI3.aspx.cs">
+      <DependentUpon>MapGoogleAPI3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Map\MapGoogleAPI3.aspx.designer.cs">
+      <DependentUpon>MapGoogleAPI3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\GenOtchet.aspx.cs">
+      <DependentUpon>GenOtchet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\GenOtchet.aspx.designer.cs">
+      <DependentUpon>GenOtchet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ItkReesZay.aspx.cs">
+      <DependentUpon>ItkReesZay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ItkReesZay.aspx.designer.cs">
+      <DependentUpon>ItkReesZay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ItkSostAMperegon.aspx.cs">
+      <DependentUpon>ItkSostAMperegon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ItkSostAMperegon.aspx.designer.cs">
+      <DependentUpon>ItkSostAMperegon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ITKzayTranGruz.aspx.cs">
+      <DependentUpon>ITKzayTranGruz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ITKzayTranGruz.aspx.designer.cs">
+      <DependentUpon>ITKzayTranGruz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Journal1.aspx.cs">
+      <DependentUpon>Journal1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Journal1.aspx.designer.cs">
+      <DependentUpon>Journal1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\MarshPoStavkam.aspx.cs">
+      <DependentUpon>MarshPoStavkam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\MarshPoStavkam.aspx.designer.cs">
+      <DependentUpon>MarshPoStavkam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\NastrOtchet.aspx.cs">
+      <DependentUpon>NastrOtchet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\NastrOtchet.aspx.designer.cs">
+      <DependentUpon>NastrOtchet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\NezakrReis.aspx.cs">
+      <DependentUpon>NezakrReis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\NezakrReis.aspx.designer.cs">
+      <DependentUpon>NezakrReis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Opozavshie.aspx.cs">
+      <DependentUpon>Opozavshie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Opozavshie.aspx.designer.cs">
+      <DependentUpon>Opozavshie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\OtcenkaPer.aspx.cs">
+      <DependentUpon>OtcenkaPer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\OtcenkaPer.aspx.designer.cs">
+      <DependentUpon>OtcenkaPer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\OtchetExpediotra.aspx.cs">
+      <DependentUpon>OtchetExpediotra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\OtchetExpediotra.aspx.designer.cs">
+      <DependentUpon>OtchetExpediotra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\OtchetExpMonth.aspx.cs">
+      <DependentUpon>OtchetExpMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\OtchetExpMonth.aspx.designer.cs">
+      <DependentUpon>OtchetExpMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\OtchetsHelp.aspx.cs">
+      <DependentUpon>OtchetsHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\OtchetsHelp.aspx.designer.cs">
+      <DependentUpon>OtchetsHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\OtkazOtReisa.aspx.cs">
+      <DependentUpon>OtkazOtReisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\OtkazOtReisa.aspx.designer.cs">
+      <DependentUpon>OtkazOtReisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\PeregonITK_1c.aspx.cs">
+      <DependentUpon>PeregonITK_1c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\PeregonITK_1c.aspx.designer.cs">
+      <DependentUpon>PeregonITK_1c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\PerevozFinance.aspx.cs">
+      <DependentUpon>PerevozFinance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\PerevozFinance.aspx.designer.cs">
+      <DependentUpon>PerevozFinance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\PogrRazgrDatePRZ.aspx.cs">
+      <DependentUpon>PogrRazgrDatePRZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\PogrRazgrDatePRZ.aspx.designer.cs">
+      <DependentUpon>PogrRazgrDatePRZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\PorojnyKast.aspx.cs">
+      <DependentUpon>PorojnyKast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\PorojnyKast.aspx.designer.cs">
+      <DependentUpon>PorojnyKast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ProsrPerDoc.aspx.cs">
+      <DependentUpon>ProsrPerDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ProsrPerDoc.aspx.designer.cs">
+      <DependentUpon>ProsrPerDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\RaspredZayMenedj.aspx.cs">
+      <DependentUpon>RaspredZayMenedj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\RaspredZayMenedj.aspx.designer.cs">
+      <DependentUpon>RaspredZayMenedj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\RasstanovkiExcel.aspx.cs">
+      <DependentUpon>RasstanovkiExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\RasstanovkiExcel.aspx.designer.cs">
+      <DependentUpon>RasstanovkiExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\RaznIsmenPlanPog.aspx.cs">
+      <DependentUpon>RaznIsmenPlanPog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\RaznIsmenPlanPog.aspx.designer.cs">
+      <DependentUpon>RaznIsmenPlanPog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Ree1cExcel.aspx.cs">
+      <DependentUpon>Ree1cExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Ree1cExcel.aspx.designer.cs">
+      <DependentUpon>Ree1cExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Ree1cVypReeExcel.aspx.cs">
+      <DependentUpon>Ree1cVypReeExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Ree1cVypReeExcel.aspx.designer.cs">
+      <DependentUpon>Ree1cVypReeExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeDokRealPost.aspx.cs">
+      <DependentUpon>ReeDokRealPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeDokRealPost.aspx.designer.cs">
+      <DependentUpon>ReeDokRealPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeGruzZayPeriod.aspx.cs">
+      <DependentUpon>ReeGruzZayPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeGruzZayPeriod.aspx.designer.cs">
+      <DependentUpon>ReeGruzZayPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeObiemZayPeriod.aspx.cs">
+      <DependentUpon>ReeObiemZayPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeObiemZayPeriod.aspx.designer.cs">
+      <DependentUpon>ReeObiemZayPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeReisDatePlanAM.aspx.cs">
+      <DependentUpon>ReeReisDatePlanAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeReisDatePlanAM.aspx.designer.cs">
+      <DependentUpon>ReeReisDatePlanAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeReisPoDateFakPogr.aspx.cs">
+      <DependentUpon>ReeReisPoDateFakPogr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeReisPoDateFakPogr.aspx.designer.cs">
+      <DependentUpon>ReeReisPoDateFakPogr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeVypnzakaz.aspx.cs">
+      <DependentUpon>ReeVypnzakaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeVypnzakaz.aspx.designer.cs">
+      <DependentUpon>ReeVypnzakaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZaezdATerritAM.aspx.cs">
+      <DependentUpon>ReeZaezdATerritAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZaezdATerritAM.aspx.designer.cs">
+      <DependentUpon>ReeZaezdATerritAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZakazPolnoExcel.aspx.cs">
+      <DependentUpon>ReeZakazPolnoExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZakazPolnoExcel.aspx.designer.cs">
+      <DependentUpon>ReeZakazPolnoExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZakazPolnoExcZak.aspx.cs">
+      <DependentUpon>ReeZakazPolnoExcZak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZakazPolnoExcZak.aspx.designer.cs">
+      <DependentUpon>ReeZakazPolnoExcZak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavDatePogr.aspx.cs">
+      <DependentUpon>ReeZayavDatePogr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavDatePogr.aspx.designer.cs">
+      <DependentUpon>ReeZayavDatePogr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavPeriod.aspx.cs">
+      <DependentUpon>ReeZayavPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavPeriod.aspx.designer.cs">
+      <DependentUpon>ReeZayavPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavPlanPogPer.aspx.cs">
+      <DependentUpon>ReeZayavPlanPogPer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavPlanPogPer.aspx.designer.cs">
+      <DependentUpon>ReeZayavPlanPogPer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavPolnoExcel.aspx.cs">
+      <DependentUpon>ReeZayavPolnoExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReeZayavPolnoExcel.aspx.designer.cs">
+      <DependentUpon>ReeZayavPolnoExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisAuk.aspx.cs">
+      <DependentUpon>ReisAuk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisAuk.aspx.designer.cs">
+      <DependentUpon>ReisAuk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisAukCena.aspx.cs">
+      <DependentUpon>ReisAukCena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisAukCena.aspx.designer.cs">
+      <DependentUpon>ReisAukCena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisAuksion.aspx.cs">
+      <DependentUpon>ReisAuksion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisAuksion.aspx.designer.cs">
+      <DependentUpon>ReisAuksion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisPeriodPlanPogr.aspx.cs">
+      <DependentUpon>ReisPeriodPlanPogr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisPeriodPlanPogr.aspx.designer.cs">
+      <DependentUpon>ReisPeriodPlanPogr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisPeriodZakPogr.aspx.cs">
+      <DependentUpon>ReisPeriodZakPogr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ReisPeriodZakPogr.aspx.designer.cs">
+      <DependentUpon>ReisPeriodZakPogr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SostZayNaDatu.aspx.cs">
+      <DependentUpon>SostZayNaDatu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SostZayNaDatu.aspx.designer.cs">
+      <DependentUpon>SostZayNaDatu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SostZayNaDatuK.aspx.cs">
+      <DependentUpon>SostZayNaDatuK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SostZayNaDatuK.aspx.designer.cs">
+      <DependentUpon>SostZayNaDatuK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SpecTehnika.aspx.cs">
+      <DependentUpon>SpecTehnika.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SpecTehnika.aspx.designer.cs">
+      <DependentUpon>SpecTehnika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SPUmejgorodReis.aspx.cs">
+      <DependentUpon>SPUmejgorodReis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SPUmejgorodReis.aspx.designer.cs">
+      <DependentUpon>SPUmejgorodReis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SPUmejgZayKratko.aspx.cs">
+      <DependentUpon>SPUmejgZayKratko.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SPUmejgZayKratko.aspx.designer.cs">
+      <DependentUpon>SPUmejgZayKratko.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SPUOtkPogrRazg.aspx.cs">
+      <DependentUpon>SPUOtkPogrRazg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SPUOtkPogrRazg.aspx.designer.cs">
+      <DependentUpon>SPUOtkPogrRazg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\StatOtchets.aspx.cs">
+      <DependentUpon>StatOtchets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\StatOtchets.aspx.designer.cs">
+      <DependentUpon>StatOtchets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\StatPerevoz.aspx.cs">
+      <DependentUpon>StatPerevoz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\StatPerevoz.aspx.designer.cs">
+      <DependentUpon>StatPerevoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\StatPoMenedjer.aspx.cs">
+      <DependentUpon>StatPoMenedjer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\StatPoMenedjer.aspx.designer.cs">
+      <DependentUpon>StatPoMenedjer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\StatZayavokGod.aspx.cs">
+      <DependentUpon>StatZayavokGod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\StatZayavokGod.aspx.designer.cs">
+      <DependentUpon>StatZayavokGod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\StatZayGorodGruzopol.aspx.cs">
+      <DependentUpon>StatZayGorodGruzopol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\StatZayGorodGruzopol.aspx.designer.cs">
+      <DependentUpon>StatZayGorodGruzopol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Stat_MG_MN.aspx.cs">
+      <DependentUpon>Stat_MG_MN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Stat_MG_MN.aspx.designer.cs">
+      <DependentUpon>Stat_MG_MN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\SvodkaZayPlanSozd.aspx.cs">
+      <DependentUpon>SvodkaZayPlanSozd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\SvodkaZayPlanSozd.aspx.designer.cs">
+      <DependentUpon>SvodkaZayPlanSozd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\TKfioZaMes.aspx.cs">
+      <DependentUpon>TKfioZaMes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\TKfioZaMes.aspx.designer.cs">
+      <DependentUpon>TKfioZaMes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivReisAdmin.aspx.cs">
+      <DependentUpon>UnivReisAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivReisAdmin.aspx.designer.cs">
+      <DependentUpon>UnivReisAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivReisPeriod.aspx.cs">
+      <DependentUpon>UnivReisPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivReisPeriod.aspx.designer.cs">
+      <DependentUpon>UnivReisPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivZayavPeriod.aspx.cs">
+      <DependentUpon>UnivZayavPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivZayavPeriod.aspx.designer.cs">
+      <DependentUpon>UnivZayavPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivZayVPeriod.aspx.cs">
+      <DependentUpon>UnivZayVPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\UnivZayVPeriod.aspx.designer.cs">
+      <DependentUpon>UnivZayVPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\VesGruzaAM.aspx.cs">
+      <DependentUpon>VesGruzaAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\VesGruzaAM.aspx.designer.cs">
+      <DependentUpon>VesGruzaAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\YBrinOtchet1.aspx.cs">
+      <DependentUpon>YBrinOtchet1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\YBrinOtchet1.aspx.designer.cs">
+      <DependentUpon>YBrinOtchet1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\YBrinZadolj.aspx.cs">
+      <DependentUpon>YBrinZadolj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\YBrinZadolj.aspx.designer.cs">
+      <DependentUpon>YBrinZadolj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\Zayav1cTEM.aspx.cs">
+      <DependentUpon>Zayav1cTEM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\Zayav1cTEM.aspx.designer.cs">
+      <DependentUpon>Zayav1cTEM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayavdatPogrPeriod.aspx.cs">
+      <DependentUpon>ZayavdatPogrPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayavdatPogrPeriod.aspx.designer.cs">
+      <DependentUpon>ZayavdatPogrPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayavkaVohr.aspx.cs">
+      <DependentUpon>ZayavkaVohr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayavkaVohr.aspx.designer.cs">
+      <DependentUpon>ZayavkaVohr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayavPerevoz.aspx.cs">
+      <DependentUpon>ZayavPerevoz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayavPerevoz.aspx.designer.cs">
+      <DependentUpon>ZayavPerevoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayPeregon.aspx.cs">
+      <DependentUpon>ZayPeregon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayPeregon.aspx.designer.cs">
+      <DependentUpon>ZayPeregon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayStatOkruga.aspx.cs">
+      <DependentUpon>ZayStatOkruga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Otchet\ZayStatOkruga.aspx.designer.cs">
+      <DependentUpon>ZayStatOkruga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankDadata.aspx.cs">
+      <DependentUpon>BankDadata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankDadata.aspx.designer.cs">
+      <DependentUpon>BankDadata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankRasSchetEd.aspx.cs">
+      <DependentUpon>BankRasSchetEd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankRasSchetEd.aspx.designer.cs">
+      <DependentUpon>BankRasSchetEd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\BlackList.aspx.cs">
+      <DependentUpon>BlackList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\BlackList.aspx.designer.cs">
+      <DependentUpon>BlackList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bukva.aspx.cs">
+      <DependentUpon>Bukva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bukva.aspx.designer.cs">
+      <DependentUpon>Bukva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Dogovory.aspx.cs">
+      <DependentUpon>Dogovory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Dogovory.aspx.designer.cs">
+      <DependentUpon>Dogovory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\DoverKontragList.aspx.cs">
+      <DependentUpon>DoverKontragList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\DoverKontragList.aspx.designer.cs">
+      <DependentUpon>DoverKontragList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\PaspKemDadata.aspx.cs">
+      <DependentUpon>PaspKemDadata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\PaspKemDadata.aspx.designer.cs">
+      <DependentUpon>PaspKemDadata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\GruzExpeditor.aspx.cs">
+      <DependentUpon>GruzExpeditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\GruzExpeditor.aspx.designer.cs">
+      <DependentUpon>GruzExpeditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\AdressAdd.aspx.cs">
+      <DependentUpon>AdressAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\AdressAdd.aspx.designer.cs">
+      <DependentUpon>AdressAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\LoadMchdXml.aspx.cs">
+      <DependentUpon>LoadMchdXml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\LoadMchdXml.aspx.designer.cs">
+      <DependentUpon>LoadMchdXml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\SuggestCloud.aspx.cs">
+      <DependentUpon>SuggestCloud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\SuggestCloud.aspx.designer.cs">
+      <DependentUpon>SuggestCloud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\SuggestCloudBel.aspx.cs">
+      <DependentUpon>SuggestCloudBel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\SuggestCloudBel.aspx.designer.cs">
+      <DependentUpon>SuggestCloudBel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\SuggestCloudKaz.aspx.cs">
+      <DependentUpon>SuggestCloudKaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\SuggestCloudKaz.aspx.designer.cs">
+      <DependentUpon>SuggestCloudKaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Marshrut\MarshrutPrint.aspx.cs">
+      <DependentUpon>MarshrutPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Marshrut\MarshrutPrint.aspx.designer.cs">
+      <DependentUpon>MarshrutPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\MovizorPlace.aspx.cs">
+      <DependentUpon>MovizorPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\MovizorPlace.aspx.designer.cs">
+      <DependentUpon>MovizorPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Perevozchiki.aspx.cs">
+      <DependentUpon>Perevozchiki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Perevozchiki.aspx.designer.cs">
+      <DependentUpon>Perevozchiki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Shortinfo.aspx.cs">
+      <DependentUpon>Shortinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Shortinfo.aspx.designer.cs">
+      <DependentUpon>Shortinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\ScanAMdok.aspx.cs">
+      <DependentUpon>ScanAMdok.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\ScanAMdok.aspx.designer.cs">
+      <DependentUpon>ScanAMdok.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TranPrint.aspx.cs">
+      <DependentUpon>TranPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TranPrint.aspx.designer.cs">
+      <DependentUpon>TranPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\AuksionGo.aspx.cs">
+      <DependentUpon>AuksionGo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\AuksionGo.aspx.designer.cs">
+      <DependentUpon>AuksionGo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\AuksView.aspx.cs">
+      <DependentUpon>AuksView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\AuksView.aspx.designer.cs">
+      <DependentUpon>AuksView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\AukViewNew.aspx.cs">
+      <DependentUpon>AukViewNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\AukViewNew.aspx.designer.cs">
+      <DependentUpon>AukViewNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\CreateZakaz.aspx.cs">
+      <DependentUpon>CreateZakaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\CreateZakaz.aspx.designer.cs">
+      <DependentUpon>CreateZakaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\IncomingZ.aspx.cs">
+      <DependentUpon>IncomingZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\IncomingZ.aspx.designer.cs">
+      <DependentUpon>IncomingZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\RasstanovkaTrEdit.aspx.cs">
+      <DependentUpon>RasstanovkaTrEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\RasstanovkaTrEdit.aspx.designer.cs">
+      <DependentUpon>RasstanovkaTrEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\RasstanovkaUse.aspx.cs">
+      <DependentUpon>RasstanovkaUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\RasstanovkaUse.aspx.designer.cs">
+      <DependentUpon>RasstanovkaUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\ScanTendDoc.aspx.cs">
+      <DependentUpon>ScanTendDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\ScanTendDoc.aspx.designer.cs">
+      <DependentUpon>ScanTendDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\SendVitrina.aspx.cs">
+      <DependentUpon>SendVitrina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\SendVitrina.aspx.designer.cs">
+      <DependentUpon>SendVitrina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\StrokaMarshruta.aspx.cs">
+      <DependentUpon>StrokaMarshruta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\StrokaMarshruta.aspx.designer.cs">
+      <DependentUpon>StrokaMarshruta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\TenderForm.aspx.cs">
+      <DependentUpon>TenderForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\TenderForm.aspx.designer.cs">
+      <DependentUpon>TenderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\TenderPerIncom.aspx.cs">
+      <DependentUpon>TenderPerIncom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\TenderPerIncom.aspx.designer.cs">
+      <DependentUpon>TenderPerIncom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\TenderZakRee.aspx.cs">
+      <DependentUpon>TenderZakRee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\TenderZakRee.aspx.designer.cs">
+      <DependentUpon>TenderZakRee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\TendSoglStavForm.aspx.aspx.cs">
+      <DependentUpon>TendSoglStavForm.aspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\TendSoglStavForm.aspx.aspx.designer.cs">
+      <DependentUpon>TendSoglStavForm.aspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\TendSoglStavOrg.aspx.cs">
+      <DependentUpon>TendSoglStavOrg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\TendSoglStavOrg.aspx.designer.cs">
+      <DependentUpon>TendSoglStavOrg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\VacantGruz.aspx.cs">
+      <DependentUpon>VacantGruz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\VacantGruz.aspx.designer.cs">
+      <DependentUpon>VacantGruz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\VacantView.aspx.cs">
+      <DependentUpon>VacantView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\VacantView.aspx.designer.cs">
+      <DependentUpon>VacantView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Work\ZakazForEdit.aspx.cs">
+      <DependentUpon>ZakazForEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Work\ZakazForEdit.aspx.designer.cs">
+      <DependentUpon>ZakazForEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\AuksionSend.aspx.cs">
+      <DependentUpon>AuksionSend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\AuksionSend.aspx.designer.cs">
+      <DependentUpon>AuksionSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\BeginZakaz.aspx.cs">
+      <DependentUpon>BeginZakaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\BeginZakaz.aspx.designer.cs">
+      <DependentUpon>BeginZakaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\doverennopp.aspx.cs">
+      <DependentUpon>doverennopp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\doverennopp.aspx.designer.cs">
+      <DependentUpon>doverennopp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\DoverennostBron.aspx.cs">
+      <DependentUpon>DoverennostBron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\DoverennostBron.aspx.designer.cs">
+      <DependentUpon>DoverennostBron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\EdExpedRaspiska.aspx.cs">
+      <DependentUpon>EdExpedRaspiska.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\EdExpedRaspiska.aspx.designer.cs">
+      <DependentUpon>EdExpedRaspiska.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\EdZakazZayav.aspx.cs">
+      <DependentUpon>EdZakazZayav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\EdZakazZayav.aspx.designer.cs">
+      <DependentUpon>EdZakazZayav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\EdZakZVV.aspx.cs">
+      <DependentUpon>EdZakZVV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\EdZakZVV.aspx.designer.cs">
+      <DependentUpon>EdZakZVV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ElZakZak.aspx.cs">
+      <DependentUpon>ElZakZak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ElZakZak.aspx.designer.cs">
+      <DependentUpon>ElZakZak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ElZakZakPdf.aspx.cs">
+      <DependentUpon>ElZakZakPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\EndZakaz.aspx.cs">
+      <DependentUpon>EndZakaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\EndZakaz.aspx.designer.cs">
+      <DependentUpon>EndZakaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETrN.aspx.cs">
+      <DependentUpon>ETrN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETrN.aspx.designer.cs">
+      <DependentUpon>ETrN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETRN2026a.aspx.cs">
+      <DependentUpon>ETRN2026a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETRN2026a.aspx.designer.cs">
+      <DependentUpon>ETRN2026a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETRN_D.aspx.cs">
+      <DependentUpon>ETRN_D.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETRN_D.aspx.designer.cs">
+      <DependentUpon>ETRN_D.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETrN_SBIS.aspx.cs">
+      <DependentUpon>ETrN_SBIS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ETrN_SBIS.aspx.designer.cs">
+      <DependentUpon>ETrN_SBIS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ForTrnAM.aspx.cs">
+      <DependentUpon>ForTrnAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ForTrnAM.aspx.designer.cs">
+      <DependentUpon>ForTrnAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\GiveAM.aspx.cs">
+      <DependentUpon>GiveAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\GiveAM.aspx.designer.cs">
+      <DependentUpon>GiveAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\GruzView.aspx.cs">
+      <DependentUpon>GruzView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\GruzView.aspx.designer.cs">
+      <DependentUpon>GruzView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\InsertAM.aspx.cs">
+      <DependentUpon>InsertAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\InsertAM.aspx.designer.cs">
+      <DependentUpon>InsertAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\LotVReis.aspx.cs">
+      <DependentUpon>LotVReis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\LotVReis.aspx.designer.cs">
+      <DependentUpon>LotVReis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\PlanTarif.aspx.cs">
+      <DependentUpon>PlanTarif.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\PlanTarif.aspx.designer.cs">
+      <DependentUpon>PlanTarif.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\podpis.aspx.cs">
+      <DependentUpon>podpis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\podpis.aspx.designer.cs">
+      <DependentUpon>podpis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\Putevoilist.aspx.cs">
+      <DependentUpon>Putevoilist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\Putevoilist.aspx.designer.cs">
+      <DependentUpon>Putevoilist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\RoutZakaz.aspx.cs">
+      <DependentUpon>RoutZakaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\RoutZakaz.aspx.designer.cs">
+      <DependentUpon>RoutZakaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ScanDok.aspx.cs">
+      <DependentUpon>ScanDok.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ScanDok.aspx.designer.cs">
+      <DependentUpon>ScanDok.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\SmotZakZVV.aspx.cs">
+      <DependentUpon>SmotZakZVV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\SmotZakZVV.aspx.designer.cs">
+      <DependentUpon>SmotZakZVV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\TraceGroup.aspx.cs">
+      <DependentUpon>TraceGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\TraceGroup.aspx.designer.cs">
+      <DependentUpon>TraceGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\TreisingARA.aspx.cs">
+      <DependentUpon>TreisingARA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\TreisingARA.aspx.designer.cs">
+      <DependentUpon>TreisingARA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\TtnEdit.aspx.cs">
+      <DependentUpon>TtnEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\TtnEdit.aspx.designer.cs">
+      <DependentUpon>TtnEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\VyborPerevozchAll.aspx.cs">
+      <DependentUpon>VyborPerevozchAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\VyborPerevozchAll.aspx.designer.cs">
+      <DependentUpon>VyborPerevozchAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\ZadPogrExcel.aspx.cs">
+      <DependentUpon>ZadPogrExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\ZadPogrExcel.aspx.designer.cs">
+      <DependentUpon>ZadPogrExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zakaz\zayavkiinreis.aspx.cs">
+      <DependentUpon>zayavkiinreis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zakaz\zayavkiinreis.aspx.designer.cs">
+      <DependentUpon>zayavkiinreis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\AstralEtcp.aspx.cs">
+      <DependentUpon>AstralEtcp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\AstralEtcp.aspx.designer.cs">
+      <DependentUpon>AstralEtcp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\brinZakazexc.aspx.cs">
+      <DependentUpon>brinZakazexc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\brinZakazexc.aspx.designer.cs">
+      <DependentUpon>brinZakazexc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\brinzakazform.aspx.cs">
+      <DependentUpon>brinzakazform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\brinzakazform.aspx.designer.cs">
+      <DependentUpon>brinzakazform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\brinZayavkaPrintForm.aspx.cs">
+      <DependentUpon>brinZayavkaPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\brinZayavkaPrintForm.aspx.designer.cs">
+      <DependentUpon>brinZayavkaPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\BronDealer.aspx.cs">
+      <DependentUpon>BronDealer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\BronDealer.aspx.designer.cs">
+      <DependentUpon>BronDealer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\Bronir.aspx.cs">
+      <DependentUpon>Bronir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\Bronir.aspx.designer.cs">
+      <DependentUpon>Bronir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\CheckAMbron.aspx.cs">
+      <DependentUpon>CheckAMbron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\CheckAMbron.aspx.designer.cs">
+      <DependentUpon>CheckAMbron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\CheckAMzay.aspx.cs">
+      <DependentUpon>CheckAMzay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\CheckAMzay.aspx.designer.cs">
+      <DependentUpon>CheckAMzay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\DateTimePogRazg.aspx.cs">
+      <DependentUpon>DateTimePogRazg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\DateTimePogRazg.aspx.designer.cs">
+      <DependentUpon>DateTimePogRazg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\DoverControl.aspx.cs">
+      <DependentUpon>DoverControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\DoverControl.aspx.designer.cs">
+      <DependentUpon>DoverControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\GroupZayav.aspx.cs">
+      <DependentUpon>GroupZayav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\GroupZayav.aspx.designer.cs">
+      <DependentUpon>GroupZayav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpicDiadoc.aspx.cs">
+      <DependentUpon>PodpicDiadoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpicDiadoc.aspx.designer.cs">
+      <DependentUpon>PodpicDiadoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcp.aspx.cs">
+      <DependentUpon>PodpisEtcp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcp.aspx.designer.cs">
+      <DependentUpon>PodpisEtcp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcpKP.aspx.cs">
+      <DependentUpon>PodpisEtcpKP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcpKP.aspx.designer.cs">
+      <DependentUpon>PodpisEtcpKP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcpZak.aspx.cs">
+      <DependentUpon>PodpisEtcpZak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcpZak.aspx.designer.cs">
+      <DependentUpon>PodpisEtcpZak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcpZakKP.aspx.cs">
+      <DependentUpon>PodpisEtcpZakKP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PodpisEtcpZakKP.aspx.designer.cs">
+      <DependentUpon>PodpisEtcpZakKP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PorojniLoad.aspx.cs">
+      <DependentUpon>PorojniLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PorojniLoad.aspx.designer.cs">
+      <DependentUpon>PorojniLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\PrintPeregon.aspx.cs">
+      <DependentUpon>PrintPeregon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\PrintPeregon.aspx.designer.cs">
+      <DependentUpon>PrintPeregon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ReisPrintEtcpK.aspx.cs">
+      <DependentUpon>ReisPrintEtcpK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ReisPrintEtcpK.aspx.designer.cs">
+      <DependentUpon>ReisPrintEtcpK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScanPeregDok.aspx.cs">
+      <DependentUpon>ScanPeregDok.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScanPeregDok.aspx.designer.cs">
+      <DependentUpon>ScanPeregDok.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladGraf.aspx.cs">
+      <DependentUpon>ScladGraf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladGraf.aspx.designer.cs">
+      <DependentUpon>ScladGraf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladSostoianie.aspx.cs">
+      <DependentUpon>ScladSostoianie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladSostoianie.aspx.designer.cs">
+      <DependentUpon>ScladSostoianie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladTimes.aspx.cs">
+      <DependentUpon>ScladTimes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladTimes.aspx.designer.cs">
+      <DependentUpon>ScladTimes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladUpr.aspx.cs">
+      <DependentUpon>ScladUpr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ScladUpr.aspx.designer.cs">
+      <DependentUpon>ScladUpr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\SignDocument.aspx.cs">
+      <DependentUpon>SignDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\SignDocument.aspx.designer.cs">
+      <DependentUpon>SignDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\Sluzhebnaya.aspx.cs">
+      <DependentUpon>Sluzhebnaya.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\Sluzhebnaya.aspx.designer.cs">
+      <DependentUpon>Sluzhebnaya.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\TimePogrRzag.aspx.cs">
+      <DependentUpon>TimePogrRzag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\TimePogrRzag.aspx.designer.cs">
+      <DependentUpon>TimePogrRzag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\TimeScladGates.aspx.cs">
+      <DependentUpon>TimeScladGates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\TimeScladGates.aspx.designer.cs">
+      <DependentUpon>TimeScladGates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\TimeScladGroup.aspx.cs">
+      <DependentUpon>TimeScladGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\TimeScladGroup.aspx.designer.cs">
+      <DependentUpon>TimeScladGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ViewShemaProezda.aspx.cs">
+      <DependentUpon>ViewShemaProezda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ViewShemaProezda.aspx.designer.cs">
+      <DependentUpon>ViewShemaProezda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelDan02.aspx.cs">
+      <DependentUpon>VoditelDan02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelDan02.aspx.designer.cs">
+      <DependentUpon>VoditelDan02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelKas01.aspx.cs">
+      <DependentUpon>VoditelKas01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelKas01.aspx.designer.cs">
+      <DependentUpon>VoditelKas01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelKas02.aspx.cs">
+      <DependentUpon>VoditelKas02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelKas02.aspx.designer.cs">
+      <DependentUpon>VoditelKas02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelTem02.aspx.cs">
+      <DependentUpon>VoditelTem02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\VoditelTem02.aspx.designer.cs">
+      <DependentUpon>VoditelTem02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazFormVirt.aspx.cs">
+      <DependentUpon>ZakazFormVirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazFormVirt.aspx.designer.cs">
+      <DependentUpon>ZakazFormVirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintDogKast.aspx.cs">
+      <DependentUpon>ZakazPrintDogKast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintDogKast.aspx.designer.cs">
+      <DependentUpon>ZakazPrintDogKast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintDogKastMN.aspx.cs">
+      <DependentUpon>ZakazPrintDogKastMN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintDogKastMN.aspx.designer.cs">
+      <DependentUpon>ZakazPrintDogKastMN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintDogzay.aspx.cs">
+      <DependentUpon>ZakazPrintDogzay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintDogzay.aspx.designer.cs">
+      <DependentUpon>ZakazPrintDogzay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintForm.aspx.cs">
+      <DependentUpon>ZakazPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintForm.aspx.designer.cs">
+      <DependentUpon>ZakazPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintFormStd.aspx.cs">
+      <DependentUpon>ZakazPrintFormStd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintFormStd.aspx.designer.cs">
+      <DependentUpon>ZakazPrintFormStd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintInostran.aspx.cs">
+      <DependentUpon>ZakazPrintInostran.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintInostran.aspx.designer.cs">
+      <DependentUpon>ZakazPrintInostran.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintKasta.aspx.cs">
+      <DependentUpon>ZakazPrintKasta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintKasta.aspx.designer.cs">
+      <DependentUpon>ZakazPrintKasta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintKastExpedMN.aspx.cs">
+      <DependentUpon>ZakazPrintKastExpedMN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintKastExpedMN.aspx.designer.cs">
+      <DependentUpon>ZakazPrintKastExpedMN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintKastJD.aspx.cs">
+      <DependentUpon>ZakazPrintKastJD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintKastJD.aspx.designer.cs">
+      <DependentUpon>ZakazPrintKastJD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintNevirt.aspx.cs">
+      <DependentUpon>ZakazPrintNevirt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZakazPrintNevirt.aspx.designer.cs">
+      <DependentUpon>ZakazPrintNevirt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPeregonEx.aspx.cs">
+      <DependentUpon>ZayavkaPeregonEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPeregonEx.aspx.designer.cs">
+      <DependentUpon>ZayavkaPeregonEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPrintExcelBr.aspx.cs">
+      <DependentUpon>ZayavkaPrintExcelBr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPrintExcelBr.aspx.designer.cs">
+      <DependentUpon>ZayavkaPrintExcelBr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaRees.aspx.cs">
+      <DependentUpon>ZayavkaRees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaRees.aspx.designer.cs">
+      <DependentUpon>ZayavkaRees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Help\HelpRus.aspx.cs">
+      <DependentUpon>HelpRus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Help\HelpRus.aspx.designer.cs">
+      <DependentUpon>HelpRus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Gruz.aspx.cs">
+      <DependentUpon>Gruz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Gruz.aspx.designer.cs">
+      <DependentUpon>Gruz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\DopInfoKontragent.aspx.cs">
+      <DependentUpon>DopInfoKontragent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\DopInfoKontragent.aspx.designer.cs">
+      <DependentUpon>DopInfoKontragent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Marshrut\MarshrutEdit.aspx.cs">
+      <DependentUpon>MarshrutEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Marshrut\MarshrutEdit.aspx.designer.cs">
+      <DependentUpon>MarshrutEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Marshrut\SpisokMarshrutov.aspx.cs">
+      <DependentUpon>SpisokMarshrutov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Marshrut\SpisokMarshrutov.aspx.designer.cs">
+      <DependentUpon>SpisokMarshrutov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\StavkiNDS.aspx.cs">
+      <DependentUpon>StavkiNDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\StavkiNDS.aspx.designer.cs">
+      <DependentUpon>StavkiNDS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\Zayavka.aspx.cs">
+      <DependentUpon>Zayavka.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\Zayavka.aspx.designer.cs">
+      <DependentUpon>Zayavka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\FizLicoEdit.aspx.cs">
+      <DependentUpon>FizLicoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\FizLicoEdit.aspx.designer.cs">
+      <DependentUpon>FizLicoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\AdressEdit.aspx.cs">
+      <DependentUpon>AdressEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\AdressEdit.aspx.designer.cs">
+      <DependentUpon>AdressEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\KontragentEdit.aspx.cs">
+      <DependentUpon>KontragentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\KontragentEdit.aspx.designer.cs">
+      <DependentUpon>KontragentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\RSchetEdit.aspx.cs">
+      <DependentUpon>RSchetEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\RSchetEdit.aspx.designer.cs">
+      <DependentUpon>RSchetEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\ScladEdit.aspx.cs">
+      <DependentUpon>ScladEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\ScladEdit.aspx.designer.cs">
+      <DependentUpon>ScladEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Spravochnik.Master.cs">
+      <DependentUpon>Spravochnik.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Spravochnik.Master.designer.cs">
+      <DependentUpon>Spravochnik.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\KontragentList.aspx.cs">
+      <DependentUpon>KontragentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\KontragentList.aspx.designer.cs">
+      <DependentUpon>KontragentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\Strana.aspx.cs">
+      <DependentUpon>Strana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\Strana.aspx.designer.cs">
+      <DependentUpon>Strana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\Gorod.aspx.cs">
+      <DependentUpon>Gorod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\Gorod.aspx.designer.cs">
+      <DependentUpon>Gorod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\TypeGorod.aspx.cs">
+      <DependentUpon>TypeGorod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\TypeGorod.aspx.designer.cs">
+      <DependentUpon>TypeGorod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\TypeUlica.aspx.cs">
+      <DependentUpon>TypeUlica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\TypeUlica.aspx.designer.cs">
+      <DependentUpon>TypeUlica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\Region.aspx.cs">
+      <DependentUpon>Region.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Adress\Region.aspx.designer.cs">
+      <DependentUpon>Region.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\Valuta.aspx.cs">
+      <DependentUpon>Valuta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\Valuta.aspx.designer.cs">
+      <DependentUpon>Valuta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankGroup.aspx.cs">
+      <DependentUpon>BankGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankGroup.aspx.designer.cs">
+      <DependentUpon>BankGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankList.aspx.cs">
+      <DependentUpon>BankList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Bank\BankList.aspx.designer.cs">
+      <DependentUpon>BankList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\GKontragentList.aspx.cs">
+      <DependentUpon>GKontragentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\GKontragentList.aspx.designer.cs">
+      <DependentUpon>GKontragentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\ScladList.aspx.cs">
+      <DependentUpon>ScladList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Kontragent\ScladList.aspx.designer.cs">
+      <DependentUpon>ScladList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\FizLicoList.aspx.cs">
+      <DependentUpon>FizLicoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\FizLicoList.aspx.designer.cs">
+      <DependentUpon>FizLicoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\Otdel.aspx.cs">
+      <DependentUpon>Otdel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\Otdel.aspx.designer.cs">
+      <DependentUpon>Otdel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\Dolzhn.aspx.cs">
+      <DependentUpon>Dolzhn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\FizLico\Dolzhn.aspx.designer.cs">
+      <DependentUpon>Dolzhn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TransportList.aspx.cs">
+      <DependentUpon>TransportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TransportList.aspx.designer.cs">
+      <DependentUpon>TransportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRGrup.aspx.cs">
+      <DependentUpon>TRGrup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRGrup.aspx.designer.cs">
+      <DependentUpon>TRGrup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRMarka.aspx.cs">
+      <DependentUpon>TRMarka.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRMarka.aspx.designer.cs">
+      <DependentUpon>TRMarka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRProizvod.aspx.cs">
+      <DependentUpon>TRProizvod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRProizvod.aspx.designer.cs">
+      <DependentUpon>TRProizvod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRType.aspx.cs">
+      <DependentUpon>TRType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRType.aspx.designer.cs">
+      <DependentUpon>TRType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRTypeGruzopod.aspx.cs">
+      <DependentUpon>TRTypeGruzopod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRTypeGruzopod.aspx.designer.cs">
+      <DependentUpon>TRTypeGruzopod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRSposobPogruzki.aspx.cs">
+      <DependentUpon>TRSposobPogruzki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRSposobPogruzki.aspx.designer.cs">
+      <DependentUpon>TRSposobPogruzki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRPricep.aspx.cs">
+      <DependentUpon>TRPricep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Transport\TRPricep.aspx.designer.cs">
+      <DependentUpon>TRPricep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Nomenklatura.aspx.cs">
+      <DependentUpon>Nomenklatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Spravochniki\Nomenklatura.aspx.designer.cs">
+      <DependentUpon>Nomenklatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaHelp.aspx.cs">
+      <DependentUpon>ZayavkaHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaHelp.aspx.designer.cs">
+      <DependentUpon>ZayavkaHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPrintControl.ascx.cs">
+      <DependentUpon>ZayavkaPrintControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPrintControl.ascx.designer.cs">
+      <DependentUpon>ZayavkaPrintControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPrintForm.aspx.cs">
+      <DependentUpon>ZayavkaPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaPrintForm.aspx.designer.cs">
+      <DependentUpon>ZayavkaPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaViewForm.aspx.cs">
+      <DependentUpon>ZayavkaViewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zayavka\ZayavkaViewForm.aspx.designer.cs">
+      <DependentUpon>ZayavkaViewForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="daninform.aspx.cs">
+      <DependentUpon>daninform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="daninform.aspx.designer.cs">
+      <DependentUpon>daninform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="danvochered.aspx.cs">
+      <DependentUpon>danvochered.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="danvochered.aspx.designer.cs">
+      <DependentUpon>danvochered.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eltrans\DanafNovison.asmx.cs">
+      <DependentUpon>DanafNovison.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Eltrans\Registr.aspx.cs">
+      <DependentUpon>Registr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eltrans\Registr.aspx.designer.cs">
+      <DependentUpon>Registr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eltrans\ScladTek.asmx.cs">
+      <DependentUpon>ScladTek.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Eltrans\WebService1.asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Generated\AstralApi.cs" />
+    <Compile Include="Generated\AstralApiEtrn.cs" />
+    <Compile Include="Generated\AstralApiEtrn_Ops.cs" />
+    <Compile Include="Generated\AstralApiEtrn_T234.cs" />
+    <Compile Include="Generated\AstralKontRepo.cs" />
+    <Compile Include="Generated\EpdRepo.cs" />
+    <Compile Include="Generated\EpdRepo_EtrnApply.cs" />
+    <Compile Include="Generated\EpdRepo_EtrnCompat.cs" />
+    <Compile Include="Generated\EpdRepo_ExtPdf.cs" />
+    <Compile Include="Generated\ET1Mapper.cs" />
+    <Compile Include="Generated\ET234Mapper.cs" />
+    <Compile Include="Generated\ETRNtituls.cs" />
+    <Compile Include="Generated\EzzDebugModels.cs" />
+    <Compile Include="Generated\EZZtituls.cs" />
+    <Compile Include="Generated\EzzXmlReader.cs" />
+    <Compile Include="Generated\ON_TRNACLGROT_1_973_01_05_01_02.cs" />
+    <Compile Include="Generated\ON_TRNACLGRPO_1_973_05_05_01_01.cs" />
+    <Compile Include="Generated\ON_TRNACLPPRIN_1_973_02_05_01_01.cs" />
+    <Compile Include="Generated\ON_TRNACLPVYN_1_973_06_05_01_01.cs" />
+    <Compile Include="Generated\ON_TRNPUDGO_1_973_08_05_01_01.cs" />
+    <Compile Include="Generated\ON_TRNPUDPER_1_973_07_05_01_02.cs" />
+    <Compile Include="Generated\ON_ZAKZVGO_1_969_01_05_01_01.cs" />
+    <Compile Include="Generated\ON_ZAKZVPER_1_969_02_05_01_01.cs" />
+    <Compile Include="Generated\PdfHelper.cs" />
+    <Compile Include="Generated\PdfHelper_ExtTimeline.cs" />
+    <Compile Include="Generated\PdfHelper_EzzDebug.cs" />
+    <Compile Include="Generated\xmlValidate.cs" />
+    <Compile Include="Generated\XsltHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AutoComplete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GooglePlus.aspx.cs">
+      <DependentUpon>GooglePlus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GooglePlus.aspx.designer.cs">
+      <DependentUpon>GooglePlus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kasinform.aspx.cs">
+      <DependentUpon>kasinform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kasinform.aspx.designer.cs">
+      <DependentUpon>kasinform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kasvochered.aspx.cs">
+      <DependentUpon>kasvochered.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kasvochered.aspx.designer.cs">
+      <DependentUpon>kasvochered.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageFrame.aspx.cs">
+      <DependentUpon>MessageFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageFrame.aspx.designer.cs">
+      <DependentUpon>MessageFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\APISBIS.cs" />
+    <Compile Include="Modules\APItools.cs" />
+    <Compile Include="Modules\Connection.cs" />
+    <Compile Include="Modules\DopFunctions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\ETRN_Titul.cs" />
+    <Compile Include="Modules\GlobalFunction.cs" />
+    <Compile Include="Modules\Mailes.cs" />
+    <Compile Include="Modules\RusNumber.cs" />
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\DanaflexQueueRepository.cs" />
+    <Compile Include="SimpleMsg.aspx.cs">
+      <DependentUpon>SimpleMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleMsg.aspx.designer.cs">
+      <DependentUpon>SimpleMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Testzay.aspx.cs">
+      <DependentUpon>Testzay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testzay.aspx.designer.cs">
+      <DependentUpon>Testzay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\\Kontur\\KonturClient.cs" />
+    <Compile Include="Generated\\Kontur\\KonturAdapter.cs" />
+    <Compile Include="Generated\\Kontur\\KonturEventMapper.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturSendTitleResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturT1ExecutionResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturAccessContext.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturRoleAccessRecord.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageExecutionResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageSignerCandidate.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageSignerContext.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageSignerSelection.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturTestModeState.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturTitleArtifact.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturTitleBuildResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturSignatureResult.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturSettingsRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturRoleAccessRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturOperatorRefRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturRawLogRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturStageSignerRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturTestModeRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturTimelineRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturTitleArtifactRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturT1Service.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturT2Service.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturT3Service.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturT4Service.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\IKonturTitleBuilder.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\IKonturSignatureService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturTitleBuilder.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturSignatureService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturEtrnT1234XmlService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturProbeStageFlowService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStageArtifactWorkspaceService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStageSignerXmlOverrideService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStageSignerService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturTestSigningContextService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturTestModeService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturT1ParticipantOverrideService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStageRunner.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturOidcTokenService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStartPolicy.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturAccessResolver.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturEtrnStageService.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturT2ExecutionResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturT3ExecutionResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturT4ExecutionResult.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturProbeStageFlowState.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\IKonturFirstTitleGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\IKonturRecipientTitleGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\IKonturTransportContextGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\KonturAdapterFirstTitleGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\KonturAdapterRecipientTitleGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\KonturTransportContextGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\IKonturStageCompletionGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Gateways\\KonturStoredStageCompletionGateway.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\BuildStageTitleUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\ConfirmStageCompletionUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\ImportStageSignatureUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStageScreenService.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\KonturStageTransitionPolicy.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\SendT1FirstTitleUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\SendT2RecipientTitleUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\SendT3RecipientTitleUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\SendT4RecipientTitleUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\CheckT1CompletionUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Integration\\SyncStageStateRefsUseCase.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageScreenModel.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageState.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageTransitionDecision.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageCompletionEvidence.cs" />
+    <Compile Include="Generated\\Kontur\\Models\\KonturStageCompletionCheckResult.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\IKonturStageStateRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\IKonturOperatorRefRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturStageStateRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\IKonturStageCompletionEvidenceRepository.cs" />
+    <Compile Include="Generated\\Kontur\\Storage\\KonturStageCompletionEvidenceRepository.cs" />
+    <Compile Include="Account\EpdSrc\KonturProbe.aspx.cs">
+      <DependentUpon>KonturProbe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EpdSrc\KonturProbe.aspx.designer.cs">
+      <DependentUpon>KonturProbe.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Account\Help\Spr\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\GlobalPages\Global.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Spravochniki\Spravochnik.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\listview\Skin1.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Account\BuhDoc\PrintForm\AktVrabot.xls" />
+    <None Include="Account\BuhDoc\PrintForm\SchetFaktura.xls" />
+    <Content Include="Account\BuhDoc\PrintForm\SchetFaktura2017.xls" />
+    <None Include="Account\Guest\StrahZayavlen.xls" />
+    <Content Include="Account\Otchet\AukSravAnalElaz.xls" />
+    <Content Include="Account\Otchet\empty.xls" />
+    <None Include="Account\Otchet\ExpOtchetsGPS.xls" />
+    <Content Include="Account\Otchet\FormaSiglStavKast.xls" />
+    <None Include="Account\Otchet\RaspredZayManedj.xls" />
+    <None Include="Account\Otchet\SPUOtkPogrRazgLC.xls" />
+    <None Include="Account\Otchet\StatOtchet.xls" />
+    <None Include="Account\Otchet\StatPerevoz.xls" />
+    <None Include="Account\Otchet\StatZayavokGod.xls" />
+    <None Include="Account\Otchet\ZayavkaVohr.xls" />
+    <None Include="Account\Zakaz\Doverennost.xls" />
+    <None Include="Account\Zakaz\Doverennostbp.xls" />
+    <None Include="Account\Zakaz\Doverennostel.xls" />
+    <None Include="Account\Zakaz\forma-t-10.xls" />
+    <None Include="Account\Zakaz\PL4C.xls" />
+    <Content Include="Account\Zakaz\TN_2021.XLS" />
+    <Content Include="Account\Zakaz\TN_2022.xls" />
+    <None Include="Account\Zakaz\ttnP2.xls" />
+    <None Include="Account\Zakaz\ttnt2011.xls" />
+    <None Include="Account\Zakaz\ttnt4.xls" />
+    <Content Include="Shablon\sbisT1.json" />
+    <None Include="Tview\BrinexTarif.xls" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>33888</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
+
