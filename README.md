@@ -1,1 +1,0 @@
-# tis-kontur-adapter
